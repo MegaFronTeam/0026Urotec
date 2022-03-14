@@ -1,4 +1,2 @@
-1. Отключил lazy плагин. Поставил  loading="lazy"
-
-
-rm -rf node_modules
+1. <https://megafronteam.github.io/0026Urotec/public/>
+1. <https://megafronteam.github.io/0026Urotec/public/>
