@@ -1,0 +1,24 @@
+mixin compitem(i, t)
+	+e.col.col-4
+		+e.item
+			+e.img-wrap
+				img(src=`img/svg/img-${i}.svg`, laoding="lazy" alt="")
+			+e.title!= t
+			block
+mixin sComplications(data)
+	// start sComplications
+	+b.SECTION.sComplications.bg-light.section#sComplications&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 sComplications
+				
+			.row
+				+compitem("1",` <span></span>`)
+					+e.text 
+				+compitem("2",``)
+				+compitem("3",``)
+				+compitem("4",``)
+				+compitem("5",``)
+				+compitem("6",``)
+
+	// end sComplications
