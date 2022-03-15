@@ -1,8 +1,35 @@
 // start .sWhereBuy
 .sWhereBuy {
-		// --sPT: ;
-		// --sPB: ;
-		// --sTPB: ;
+	background: $light;
+		--sPT: 0;
+		--sPB: #{rem(56)};
+		
+		.section-title{
+			margin-bottom: 36px;
+			h2{				
+				margin-bottom: 0;
+				letter-spacing: -1px;
+			}
+		}
+
+		&__item {
+			height: 120px;
+			display: flex;
+			margin-bottom: 2.4rem;		
+		}
+
+		&__img {	
+			display: flex;
+			justify-content: center;
+			align-items: center;		
+			padding: 25px 30px;
+			width: 100%;
+			background: $white;
+			border-radius: 4px;	
+			img {
+				flex-shrink: 0;
+			}
+		}
 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

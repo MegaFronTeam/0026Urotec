@@ -1,12 +1,11 @@
 // start .sCatalog
 .sCatalog {
 		--sPT: #{rem(78)};
-		--sPB: #{rem(34px)};
+		--sPB: #{rem(36)};
 		--sTPB: 0.5rem;
 		background: $light;
 
 		.section-title{
-			// margin-bottom: 0.5rem;
 			h2{				
 				margin-bottom: 0;
 				letter-spacing: -1px;
@@ -27,33 +26,42 @@
 			font-size: 12px;
 		}
 
-	&__item {		
+	&__col {
+		margin-bottom: 1rem;
+	}
+
+	&__item {	
 		position: relative;
 		padding: rem(33) rem(24);
-		height: 100%;
+		min-height: 100%;
 		background: $white;
 		border-radius: 8px;
 	}	
 
 	&__title {
-		font-weight: $font-weight-bold;
+		font-weight: bold;
 		margin-bottom: 1.3rem;
 		@include rfs(24px);
 	}
 
 	&__img {
-		margin-bottom: .5rem;
-		// align-self: center;
+		margin-bottom: var(--sTPB);
 	}
 
 	
 	&__license {
-		@include media-breakpoint-up(lg) {
-			right: rem(-22);
+		@include media-breakpoint-up(xl) {
+			right:0;
 		}
+		// @include media-breakpoint-up(md) {
+		// 	right:rem(-22);
+		// }
+		// @include media-breakpoint-up(sm) {
+		// 	right: rem(22);
+		// }
 		position: absolute;
 		max-width: 112px;
-		right:0;
+		right:rem(-22);
 		top: 39%;
 		font-size: 12px;
 		line-height: 140%;

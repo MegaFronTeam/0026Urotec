@@ -2,8 +2,24 @@ mixin sMethod(data)
 	// start sMethod
 	+b.SECTION.sMethod.section#sMethod&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sMethod
-				
-			.row
+			+b.section-title
+				h2 Способ применения* 6
+			.row.row-cols-2.g-2
+				mixin item(i,t)
+					.col.col-md-4 
+						+e.item
+							+img(`svg/method-i-${i}.svg`)
+							+e.title!= t
+				+item(`1`,`1&nbsp;раз в&nbsp;день, рекомендуемая доза 8мг`)
+				+item(`2`,`Капсула принимается целиком`)
+				+item(`3`,`Одновременно с&nbsp;приемом пищи`)
+				+item(`4`,`Предпочтительно в&nbsp;одно и&nbsp;тоже время суток`)
+				+item(`5`,`Желательно запивать стаканом воды`)
+			.row.justify-content-between
+				+e.descr.col-md-7.col-12
+					p У&nbsp;пациентов с&nbsp;легкой почечной недостаточностью (клиренс креатинина &ge; 50&nbsp;&mdash; &le; 80&nbsp;мл/мин) коррекция дозы не&nbsp;требуется. Для лечения пациентов с&nbsp;почечной недостаточностью средней степени тяжести (клиренс креатинина &ge; 30&nbsp;&mdash; &lt; 50&nbsp;мл/мин) рекомендуется в&nbsp;течение первой недели принимать начальную дозу по&nbsp;4&nbsp;мг в&nbsp;сутки, при хорошей индивидуальной переносимости доза может быть увеличена до&nbsp;8&nbsp;мг в&nbsp;сутки. Применение препарата для пациентов с&nbsp;тяжелой почечной недостаточностью (клиренс креатинина &lt;&nbsp;30&nbsp;мл&nbsp;/&nbsp;мин) не&nbsp;рекомендуется
+				+e.download.col-md-5.col-12
+					button.sMethod__btn <img src="img/svg/method-i-pdf.svg" loading="lazy" alt=""> Инструкция по применению					
+					p.sMethod__more *Более подробные сведения о&nbsp;препарате, особенностях применения, побочных действиях и&nbsp;др. &mdash;&nbsp;см. инструкцию по&nbsp;медицинскому применению лекарственного препарата Урорек, РУ&nbsp;ЛСР-005971/10 от&nbsp;25.06.2010
+		
 	// end sMethod

@@ -8,12 +8,11 @@ mixin sCatalog(data)
 			p.section-note.col-10 *Более подробные сведения о&nbsp;препарате, особенностях применения, побочных действиях и&nbsp;др. &mdash;&nbsp;смотрите инструкцию по&nbsp;медицинскому применению лекарственного препарата Урорек, РУ&nbsp;ЛСР-005971/10 от&nbsp;25.06.2010 
 			.row
 				mixin item(t,i,d,l)
-						+e.col.col-md-4 
+						+e.col.col-md-6.col-lg-4 
 							+e.item.d-flex.flex-column.align-items-center
-								+e.title!= t
-								+img(`catalog-img-${i}.png`).sCatalog__img
-								//- +e.img-wrap.text-center
-								//- 	img(src=`img/catalog-img-${i}.png`, laoding="lazy" alt="")							
+								+e.title!= t								
+								+e.img.img-wrap.text-center
+									img(src=`img/catalog-img-${i}.png`, laoding="lazy" alt="")
 								+e.descr.text-center!= d
 								+e.license!= l
 				+item(`Урорек 8мг №30`,`1`, `Упаковка, рассчитанная на&nbsp;1&nbsp;месяц лечения&nbsp;/ для старта терапии`,`РУ: ЛСР-005971/10 от 25.06.2010`)
