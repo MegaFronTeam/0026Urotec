@@ -2,11 +2,11 @@
 .sCatalog {
 		--sPT: #{rem(78)};
 		--sPB: #{rem(34px)};
+		--sTPB: 0.5rem;
 		background: $light;
-		// --sTPB: ;
 
 		.section-title{
-			margin-bottom: 0.5rem;
+			// margin-bottom: 0.5rem;
 			h2{				
 				margin-bottom: 0;
 				letter-spacing: -1px;
