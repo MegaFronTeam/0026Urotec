@@ -7,8 +7,13 @@
 	width: 100%;
 	padding-top: var(--y-top);
 	padding-bottom: var(--y-top);
+	@include mt;
+	&.fixed{
+		background: rgba(#004CAC, .8);
+		padding-top: calc(var(--y-top) / 3);
+		padding-bottom: calc(var(--y-top) / 3);
 
-
+	}
 	z-index: 1000;
 	.row{
 		align-items: center;
@@ -23,6 +28,7 @@
 	&__btn{
 		@extend .btn, .btn-sm,  .btn-warning;
 	}
+	
 	// opacity: 0.5;
 	@include media-breakpoint-up(md) {}
 	@include media-breakpoint-up(md) {}
