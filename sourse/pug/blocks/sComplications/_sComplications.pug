@@ -1,24 +1,23 @@
 mixin compitem(i, t)
 	+e.col.col-4
 		+e.item
-			+e.img-wrap
-				img(src=`img/svg/img-${i}.svg`, laoding="lazy" alt="")
-			+e.title!= t
+			+e.img-wrap.text-center
+				img(src=`img/complex-img-${i}.png`, laoding="lazy" alt="")
+			+e.title.text-center.comitem-title!= t
 			block
 mixin sComplications(data)
 	// start sComplications
-	+b.SECTION.sComplications.bg-light.section#sComplications&attributes(attributes)
+	+b.SECTION.sComplications.section#sComplications&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sComplications
+			+b.section-title
+				h2 Осложнения ДГПЖ38
 				
 			.row
-				+compitem("1",` <span></span>`)
-					+e.text 
-				+compitem("2",``)
-				+compitem("3",``)
-				+compitem("4",``)
-				+compitem("5",``)
-				+compitem("6",``)
+				+compitem("1",`Острая задержка мочеиспускания`)
+				+compitem("2",`Рецидивирующая инфекция мочевыводящих путей`)
+				+compitem("3",`Камни мочевого пузыря`)
+				+compitem("4",`Гематурия <span>(обычно из&nbsp;варикозно расширенных вен шейки мочевого пузыря)</span>`)
+				+compitem("5",`Двусторонний уретерогидронефроз и&nbsp;почечная недостаточность (нефропатия)`)
+				+compitem("6",`Дивертикулы мочевого пузыря`)
 
 	// end sComplications

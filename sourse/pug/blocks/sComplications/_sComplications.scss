@@ -3,7 +3,23 @@
 		// --sPT: ;
 		// --sPB: ;
 		// --sTPB: ;
+	&__item {
+		margin-bottom: 64px;
+	}
+	
+	&__img-wrap {
+		min-height: 189px;
+	}
 
+	.comitem-title {
+		max-width: 328px;
+		margin-right: 0!important;
+
+		span {
+			display: block;
+		}
+	}
+	
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
