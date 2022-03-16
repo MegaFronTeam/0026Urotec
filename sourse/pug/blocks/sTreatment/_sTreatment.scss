@@ -1,8 +1,45 @@
 // start .sTreatment
 .sTreatment {
-		// --sPT: ;
-		// --sPB: ;
-		// --sTPB: ;
+	--sPT: #{rem(78)};
+	--sPB: #{rem(311)};
+	--sTPB: 1.5rem;
+	background-color: $light;
+
+	.container {
+		position: relative;
+	}
+
+	&__descr {
+		margin-bottom: 3rem;
+	}
+
+	.row {
+		--bs-gutter-y: #{rem(30)}	
+	}
+
+	.treatment-item {
+		padding: 1rem 2rem 1.5rem 1.5rem;
+		height: 100%;
+		background: $white;
+		&__title {
+			font-weight: 700;
+		}
+	}
+
+	&__video {
+		position: absolute;
+		left: var(--bs-gutter-x,.8rem);
+		right: var(--bs-gutter-x,.8rem);
+		bottom: -92.5%;
+		height: 512px;
+		text-align: center;
+		background-color: #293741;		
+		img {			
+			width: 226px;
+			position: relative;
+			top: 70%;
+		}
+	}
 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

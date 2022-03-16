@@ -1,23 +1,21 @@
 // start .sComplications
 .sComplications {
 	--sPT: #{rem(99)};
-	--sPB: #{rem(63)};
-		// --sTPB: ;
-	.section-title{
-		margin-bottom: 5rem;
-	}
-	&__item {
-		margin-bottom: 58px;
-	}
+	--sPB: #{rem(138)};
+	--sTPB: 5rem;
 	
-	&__img-wrap {
-		min-height: 189px;
-		margin-bottom: 2rem;		
+	&__row {
+		--bs-gutter-y: #{rem(58)};
 	}
 
-	.comitem-title {
+	&__col {
+		text-align: center;
+	}
+
+	&__title {
 		max-width: 328px;
-		margin-right: 0!important;
+		margin-right: auto;
+		margin-left: auto;
 
 		span {
 			display: block;
@@ -25,6 +23,14 @@
 			color: #292929;
 		}
 	}
+	
+	&__img-wrap {
+		height: 189px;
+		line-height: 189px;
+		vertical-align: middle;
+		margin-bottom: 2rem;		
+	}
+
 	
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

@@ -11,6 +11,9 @@
 		}
 	.row:not(:last-child) {
 		margin-bottom: rem(50);
+		--bs-gutter-x:  #{rem(39)};
+		--bs-gutter-y:  #{rem(48)};
+		
 
 		.col {
 			@include media-breakpoint-up(lg) {
@@ -64,6 +67,10 @@
 		}
 		@include media-breakpoint-up(md) {
 			align-self: stretch;
+		}
+		.icon {
+			font-size: rem(28);
+			margin-right: 20px;
 		}
 	}
 

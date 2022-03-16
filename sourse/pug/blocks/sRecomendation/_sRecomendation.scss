@@ -1,18 +1,16 @@
 // start .sRecomendation
 .sRecomendation {
-	--sPT: 0;
+	--sPT: #{rem(27)};
 	--sPB: 0;
-		// --sTPB: ;
-	.section-title{
-		margin-bottom: 1.5rem;
-	}
-
+	--sTPB: #{rem(27)};
+	
 	.ref-item {
 
 		&__link {
-			line-height: 130%;			
-			text-transform: uppercase;
-			border-bottom: 1px solid $blue;
+			padding-bottom: 2px;
+			line-height: 130%;
+			text-decoration: underline;
+			// border-bottom: 1px solid $blue;
 		}
 
 		&__descr {

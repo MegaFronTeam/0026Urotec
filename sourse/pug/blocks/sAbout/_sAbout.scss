@@ -2,19 +2,31 @@
 .sAbout {
 	background-color: #004CAC;
 	color: $white;
-	--sPT: #{rem(84)};
-	--sPB: #{rem(63)};
-		// --sTPB: ;
-	.section-title{
-		margin-bottom: 2.6rem;
+	--sPT: #{rem(82)};
+	--sPB: #{rem(65)};
+	--sTPB: #{rem(57)};
+
+	&__container {
+		position: relative;
+		padding-bottom: 26px;
 	}
-	&__descr {
-		margin-bottom: 1.6rem;
+
+	&__img-wrap {
+		position: absolute;
+			bottom: 0;
+			right: -4px;
+	}
+	
+	&__descr {		
 		max-width: 500px;
+		margin-bottom: 0;
+		&:first-child {
+			margin-bottom: 1.6rem;
+		}
 	}
 
 	&__warning {
-		padding: rem(28) rem(120) rem(52);
+		padding: rem(31) rem(119) rem(52);
 		margin-bottom: 2.7rem;
 		font-size: rem(24);
 		font-weight: 700;
@@ -31,7 +43,7 @@
 		}
 
 		&__descr {
-			margin-bottom: 5rem;
+			margin-bottom: 2.5rem;
 		}
 	}
 
@@ -40,6 +52,7 @@
 			display: flex;
 			flex-direction: column;
 			align-items:center;
+			--bs-gutter-y:  #{rem(48)};
 		}
 
 		img {

@@ -1,10 +1,9 @@
 mixin compitem(i, t)
-	+e.col.col-lg-4.col-md-6
-		+e.item
-			+e.img-wrap.text-center
-				img(src=`img/complex-img-${i}.png`, loading="lazy" alt="")
-			+e.title.text-center.comitem-title!= t
-			block
+	+e.col.col-lg-4.col-sm-6
+		+e.img-wrap
+			img(src=`img/complex-img-${i}.png`, loading="lazy" alt="")
+		+e.title!= t
+		block
 mixin sComplications(data)
 	// start sComplications
 	+b.SECTION.sComplications.section#sComplications&attributes(attributes)
@@ -12,7 +11,7 @@ mixin sComplications(data)
 			+b.section-title
 				h2 Осложнения ДГПЖ38
 				
-			.row
+			+e.row.row
 				+compitem("1",`Острая задержка мочеиспускания`)
 				+compitem("2",`Рецидивирующая инфекция мочевыводящих путей`)
 				+compitem("3",`Камни мочевого пузыря`)
