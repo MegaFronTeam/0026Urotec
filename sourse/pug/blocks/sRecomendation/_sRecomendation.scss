@@ -1,23 +1,27 @@
 // start .sRecomendation
 .sRecomendation {
 	--sPT: 0;
-		// --sPB: ;
+	--sPB: 0;
 		// --sTPB: ;
 	.section-title{
 		margin-bottom: 1.5rem;
 	}
 
 	.ref-item {
-		margin-bottom: 25px;
 
 		&__link {
-			line-height: 130%;
-			text-decoration: underline;
+			line-height: 130%;			
 			text-transform: uppercase;
+			border-bottom: 1px solid $blue;
 		}
 
 		&__descr {
 			font-size: rem(16);
+			color: #292929;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 23px;
 		}
 	}
 	

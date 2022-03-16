@@ -1,14 +1,18 @@
 // start .sComplications
 .sComplications {
-		// --sPT: ;
-		// --sPB: ;
+	--sPT: #{rem(99)};
+	--sPB: #{rem(63)};
 		// --sTPB: ;
+	.section-title{
+		margin-bottom: 5rem;
+	}
 	&__item {
-		margin-bottom: 64px;
+		margin-bottom: 58px;
 	}
 	
 	&__img-wrap {
 		min-height: 189px;
+		margin-bottom: 2rem;		
 	}
 
 	.comitem-title {
@@ -17,6 +21,8 @@
 
 		span {
 			display: block;
+			font-size: rem(16);
+			color: #292929;
 		}
 	}
 	

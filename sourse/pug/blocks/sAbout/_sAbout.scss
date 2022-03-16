@@ -1,9 +1,63 @@
 // start .sAbout
 .sAbout {
-		// --sPT: ;
-		// --sPB: ;
+	background-color: #004CAC;
+	color: $white;
+	--sPT: #{rem(84)};
+	--sPB: #{rem(63)};
 		// --sTPB: ;
+	.section-title{
+		margin-bottom: 2.6rem;
+	}
+	&__descr {
+		margin-bottom: 1.6rem;
+		max-width: 500px;
+	}
 
+	&__warning {
+		padding: rem(28) rem(120) rem(52);
+		margin-bottom: 2.7rem;
+		font-size: rem(24);
+		font-weight: 700;
+		line-height: 140%;
+		text-align: center;
+		color: $white;
+		background-color:$warning;
+	}
+
+	.symptoms {
+		position: relative;
+		&__title {
+			margin-bottom: 2rem;
+		}
+
+		&__descr {
+			margin-bottom: 5rem;
+		}
+	}
+
+	.symptoms-list {
+		&__item {
+			display: flex;
+			flex-direction: column;
+			align-items:center;
+		}
+
+		img {
+			margin-bottom: 28px;
+		}
+
+		&__title {
+			font-size: 16px;
+			text-align: center;
+		}
+	}
+
+	// .symptoms-list + img {
+	// 	position: absolute;
+	// 	right: 0;
+	// 	bottom: 0;
+	// }
+	
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

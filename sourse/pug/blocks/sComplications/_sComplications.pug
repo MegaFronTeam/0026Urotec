@@ -1,8 +1,8 @@
 mixin compitem(i, t)
-	+e.col.col-4
+	+e.col.col-lg-4.col-md-6
 		+e.item
 			+e.img-wrap.text-center
-				img(src=`img/complex-img-${i}.png`, laoding="lazy" alt="")
+				img(src=`img/complex-img-${i}.png`, loading="lazy" alt="")
 			+e.title.text-center.comitem-title!= t
 			block
 mixin sComplications(data)
