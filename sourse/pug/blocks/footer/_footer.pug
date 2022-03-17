@@ -1,9 +1,11 @@
 mixin footer()
 	+b.FOOTER.footer
 		.container
-			.row
-				.col
-					
-				.col Footer
-				.col
-				.col-auto
+			+b.footer-top.row
+				.col.col-3
+					+e.logo
+						a(href="/")
+							img(src="img/recordati-logo.png", alt="")
+				.col.col-3 Организация, принимающая претензии: ООО&laquo;Русфик&raquo;, группа компаний Recordati
+				.col.col-5 Имеются противопоказания. Необходимо ознакомиться с&nbsp;инструкцией. Инструкция по&nbsp;медицинскому применению лекарственного препарата Урорек, РУ&nbsp;ЛСР-005971/10 от&nbsp;25.06.2010
+				.col-auto &copy; 2021

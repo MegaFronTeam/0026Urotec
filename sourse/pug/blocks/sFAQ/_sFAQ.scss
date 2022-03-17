@@ -1,8 +1,19 @@
 // start .sFAQ
 .sFAQ {
-		// --sPT: ;
+		--sPT: #{rem(418)};
 		// --sPB: ;
 		// --sTPB: ;
+	background-color: #004CAC;
+	color: $white;
+
+	.dd-group {
+
+		&__head {
+			padding: rem(29) rem(15);
+			font-size: #{rem(32)};
+			line-height: 130%;
+		}
+	}
 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

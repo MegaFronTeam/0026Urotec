@@ -1,7 +1,9 @@
 .footer {
 		
 	margin-top: auto;
-
+	.footer-top {
+		font-size: 10px;
+	}
 // 
 @include media-breakpoint-up(xl) {}
 
