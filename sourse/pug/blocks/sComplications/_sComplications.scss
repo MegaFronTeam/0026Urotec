@@ -1,24 +1,36 @@
 // start .sComplications
 .sComplications {
-		// --sPT: ;
-		// --sPB: ;
-		// --sTPB: ;
-	&__item {
-		margin-bottom: 64px;
-	}
+	--sPT: #{rem(99)};
+	--sPB: #{rem(138)};
+	--sTPB: 5rem;
 	
-	&__img-wrap {
-		min-height: 189px;
+	&__row {
+		--bs-gutter-y: #{rem(58)};
 	}
 
-	.comitem-title {
+	&__col {
+		text-align: center;
+	}
+
+	&__title {
 		max-width: 328px;
-		margin-right: 0!important;
+		margin-right: auto;
+		margin-left: auto;
 
 		span {
 			display: block;
+			font-size: rem(16);
+			color: #292929;
 		}
 	}
+	
+	&__img-wrap {
+		height: 189px;
+		line-height: 189px;
+		vertical-align: middle;
+		margin-bottom: 2rem;		
+	}
+
 	
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

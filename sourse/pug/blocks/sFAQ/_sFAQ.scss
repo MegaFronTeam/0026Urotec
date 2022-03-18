@@ -1,8 +1,52 @@
 // start .sFAQ
 .sFAQ {
-		// --sPT: ;
+		--sPT: #{rem(133)};
 		// --sPB: ;
-		// --sTPB: ;
+		--sTPB: #{rem(45)};
+	background-color: #004CAC;
+	color: $white;
+
+	.dd-group {
+		&__item {
+			margin-bottom: rem(29);
+		}
+
+		&__head {
+			padding: rem(29) rem(15) rem(29) rem(27);
+			font-size: #{rem(32)};
+			line-height: 130%;
+			cursor: pointer;			
+		}
+
+		&__content {
+			p {
+				margin-bottom: rem(32);
+			}
+			
+		}
+		
+		&__item {
+			border-top:1px solid rgba($color: $white, $alpha: 0.5);
+			.dd-group__head {
+				position: relative;
+				&::before {
+					position: absolute;
+					top: calc(rem(29) + 16px);
+					left: 0;
+					content: '';
+					display: inline-block;
+					@include triangle(16px 12px, $warning, right);
+				}
+			}			
+			&.active {
+				.dd-group__head {
+					&::before {
+						@include triangle(16px 12px, $warning, down);
+					}
+				}				
+			}			
+		}
+	}
 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

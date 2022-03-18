@@ -1,8 +1,40 @@
 // start .sWhereBuy
 .sWhereBuy {
-		// --sPT: ;
-		// --sPB: ;
-		// --sTPB: ;
+	background: $light;
+		--sPT: 0;
+		--sPB: #{rem(104)};
+		
+		.section-title{
+			margin-bottom: 36px;
+			h2{				
+				margin-bottom: 0;
+				letter-spacing: -1px;
+			}
+		}
+
+
+		&__row {
+			@include media-breakpoint-up(xl) {
+				--bs-gutter-x:  #{rem(53)};
+				--bs-gutter-y:  #{rem(48)};
+			}			
+			--bs-gutter-y: var(--bs-gutter-x);
+		}
+
+		
+		&__item {	
+			display: flex;
+			height: 120px;
+			justify-content: center;
+			align-items: center;		
+			padding: 25px 30px;
+			width: 100%;
+			background: $white;
+			border-radius: 4px;	
+			img {
+				flex-shrink: 0;
+			}
+		}
 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

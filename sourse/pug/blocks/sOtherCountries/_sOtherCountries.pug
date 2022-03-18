@@ -2,8 +2,28 @@ mixin sOtherCountries(data)
 	// start sOtherCountries
 	+b.SECTION.sOtherCountries.section#sOtherCountries&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sOtherCountries
+			+b.section-title
+				h2 Препарат Урорек (силодозин) зарегистрирован и&nbsp;применяется в&nbsp;разных странах мира Одобрен ЕМА*<sup>34</sup> и&nbsp;FDA**<sup>35</sup>
+			+e.agencies
+				p.sOtherCountries__agency <span>EMA</span> Европейское медицинское агентство
+				p.sOtherCountries__agency <span>FDA</span> Управление по&nbsp;санитарному надзору за&nbsp;качеством пищевых продуктов и&nbsp;медикаментов, США
+			+e.reg Год регистрации:
+			+b.flags-container.row
+				mixin countryItem(img, country, year)
+					.col-lg-3.col-6
+						+e.item
+							+e.img.img-wrap
+								img(src=`img/countries-img-${img}.png`, laoding="lazy" alt="")
+							+e.country!= country
+							+e.year!= year
+							block
+				+countryItem('1','Япония','2006<sup>36,37</sup>')
+				+countryItem('2','США','2008<sup>35</sup>')
+				+countryItem('3','Страны ЕС','2010<sup>34</sup>')
+				+countryItem('4','Россия','2010<sup>1</sup>')
+			p.sOtherCountries__descr Производство препарата Урорек, поставляемого в&nbsp;Россию, осуществляется в&nbsp;Италии с&nbsp;использованием субстанции из&nbsp;Японии, в&nbsp;соответствии с&nbsp;необходимыми требованиями к&nbsp;производству и&nbsp;контролю качества<sup>6,1</sup>
+
+
 				
-			.row
+			
 	// end sOtherCountries

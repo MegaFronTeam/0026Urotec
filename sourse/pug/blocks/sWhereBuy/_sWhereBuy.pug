@@ -2,8 +2,12 @@ mixin sWhereBuy(data)
 	// start sWhereBuy
 	+b.SECTION.sWhereBuy.section#sWhereBuy&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sWhereBuy
-				
-			.row
+			+b.section-title
+				h2 Где купить				
+			+e.row.row
+				- for (var x = 1; x <= 12; x++)
+					+e.col.col-lg-3.col-md-4.col-6
+						+e.item.text-center
+							img.res-i(src=`img/tobuy-img-${x}.png`, loading="lazy" alt="")
+			
 	// end sWhereBuy

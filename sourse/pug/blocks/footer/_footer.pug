@@ -1,9 +1,95 @@
 mixin footer()
 	+b.FOOTER.footer
 		.container
-			.row
-				.col
-					
-				.col Footer
-				.col
-				.col-auto
+			+b.footer-top.row
+				.col.col-3
+					+e.logo
+						a(href="/")
+							img(src="img/recordati-logo.png", alt="")
+				.col-12.col-sm-3 Организация, принимающая претензии: ООО&laquo;Русфик&raquo;, группа компаний Recordati
+				.col-12.col-sm-5.contr 
+					p Имеются противопоказания. Необходимо ознакомиться с&nbsp;инструкцией. Инструкция по&nbsp;медицинскому применению лекарственного препарата Урорек, РУ&nbsp;ЛСР-005971/10 от&nbsp;25.06.2010
+				.col-1.cr &copy;&nbsp;2021
+			+b.footer-bottom
+				.row
+					.col-12.col-xl-3.col-lg-4.col-sm-6
+						+e.title Адрес:
+						+e.addr
+							p 123610&nbsp;г. Москва,
+							p Краснопресненская наб., д.&nbsp;12,
+							p под.&nbsp;7, эт.&nbsp;6, пом. IАЖ
+					.col-12.col-xl-3.col-lg-4.col-sm-6
+						+e.title Контакты:
+						+e.addr
+							p тел.: +7 (495) 225-80-01
+							p факс: +7 (495) 258-20-07
+							p E-mail: info@rusfic.com
+					.col
+						ul.footer__links
+							li
+								a(href="#") Политика конфиденциальности
+							li
+								a(href="#") Инструкция к&nbsp;препарату
+							li
+								a(href="#") Контакты
+			+b.sources
+				h2 Источники 
+				button.btn.btn-link Свернуть список
+				ol
+					li https://grls.rosminzdrav.ru/Grls_View_v2.aspx?routingGuid=89a66596-ce1d-454a-a356-5d4a4a0b191e&amp;t= 07.12.2021
+					li Котов С.В., Богданов Д.А. Силодозин&nbsp;&mdash; место в&nbsp;лечении СНМП/ДГПЖ с&nbsp;позиции доказательной медицины и&nbsp;реальной практики. Урология.&nbsp;2021;5:94&mdash;98
+					li Материалы ХVIII конгресса российского общества урологов и&nbsp;российско-китайского форума по&nbsp;урологии, 8-10 ноября 2018г, Екатеринбург &laquo;СНМП/ДГПЖ&nbsp;&mdash; кто лечит? Предварительные результаты российского эпидемиологического исследования&raquo; Пушкарь Д.Ю., Раснер П.И., Неймарк А.И., Капсаргин Ф.П., Коган М.И., Медведев В.Л., Абоян И.А., Аль-Шукри С.Х., Корнеев И.А., Асфандияров Ф.Р., Братчиков О.И,, Котов С.В., Крупин В.Н., Новиков А.И., Павлов В.П., Цуканов А.Ю., Шарманов И.С., стр.&nbsp;288
+					li Fusco F&nbsp;et&nbsp;al., Adv Ther 2017;34(4):773-783
+					li Curran M.P., Drugs 2011; 71(7): 897-907
+					li Инструкция по&nbsp;медицинскому применению лекарственного препарата Урорек, РУ&nbsp;ЛСР-005971/10 от&nbsp;25.06.2010
+					li Kim T.N. et&nbsp;al., Urology 2014; dx.doi.org/10.1016/J.Urology.2014.02.068
+					li Choi et&nbsp;al.Prostate Int&nbsp;5 (2017) 113-8
+					li Chapple C.R. et&nbsp;al. Silodosin therapy for lower urinary tract symptoms in&nbsp;men with suspected benign prostatic hyperplasia: results of&nbsp;an&nbsp;international, randomized, double-blind, placebo- and active-controlled clinical trial performed in&nbsp;Europe. Eur Urol.&nbsp;2011;59:342
+					li Силодозин&nbsp;&mdash; новый &alpha;-адреноблокатор для выигрыша в&nbsp;матче против ДГПЖ. Эффективная фармакотерапия. Урология и&nbsp;нефрология. 5/2012
+					li Creta M&nbsp;et al. Eur Urol Focus 2020; 1-6.
+					li Takao T&nbsp;et&nbsp;al. Early efficacy of&nbsp;silodosin in&nbsp;patients with lower urinary tract symptoms suggestive of&nbsp;benign prostatic hyperplasia. Int J&nbsp;Urol 2008; 15: 992-996
+					li Montorsi F&nbsp;et&nbsp;al., Int J&nbsp;Urol 2016;23(7):572-9
+					li Marks LS, Gittelman MC, HiII&nbsp;LA, Volinn W, Hoel G. J&nbsp;Urol.&nbsp;2009;181:2634-2640
+					li Yamanishi T. Et&nbsp;al., Int J. Urol.&nbsp;2015&nbsp;Dol: 10.1111/Iju.12915
+					li Fusco F&nbsp;et&nbsp;al., Adv Ther 2017;34(4):773-783
+					li Capitanio&nbsp;U. et&nbsp;al., Int. J.&nbsp;Clin. Pract.&nbsp;2013; doi: 10.1111/ijcp.12135
+					li Nasu&nbsp;K, et&nbsp;al. Br&nbsp;J&nbsp;Pharmacol.&nbsp;1996;119:797-803 
+					li Smith D.J. et&nbsp;all,1994 
+					li Ford APWD et&nbsp;all, 1996 
+					li Rudner XL, Berkowitz DE, Circulation.&nbsp;1999;100:2336-2343
+					li Townsend SA, Jung AS, Hoe YSG, et&nbsp;al. Hypertension.&nbsp;2004;44:776-782
+					li Masaki KH, Schatz I, Burchfiel&nbsp;CM, et&nbsp;al. Circulation.&nbsp;1998;98:2290-2295
+					li Schwinn DA, Roehrborn CG, Int J&nbsp;Urol.&nbsp;2008 March;15(3):193&mdash;199
+					li Tatemichi S&nbsp;et.al. Comparison of&nbsp;the effects of&nbsp;four &alpha;1-adrenoreceptor antagonists on&nbsp;ejaculatory function&nbsp;In rats. Urol 2012,80(2):486,e9-16
+					li Katzung BG. Basic and clinical pharmacology. 6th ed. Norwalk4&nbsp;CT: Appleton &amp;&nbsp;Lange; 1995
+					li Данные IQVIA 3&nbsp;квартал 2021
+					li https://legalacts.ru/doc/klinicheskie-rekomendatsii-dobrokachestvennaja-giperplazija-predstatelnoi-zhelezy-utv-minzdravom-rossii/
+					li https://uroweb.org/guideline/treatment-of-non-neurogenic-male-luts/#5
+					li http://www.rosminzdrav.ru/documents/8422-prikaz-ministerstva-zdravoohraneniya-rossiyskoy-federatsii-ot-9-noyabrya-2012-g-697n-ob-utverzhdenii-standarta-pervichnoy-mediko-sanitarnoy-pomoschi-pri-giperplazii-predstatelnoy-zhelezy
+					li https://minzdrav.gov.ru/documents/8863-prikaz-ministerstva-zdravoohraneniya-rossiyskoy-federatsii-ot-9-noyabrya-2012-g-745n-ob-utverzhdenii-standarta-spetsializirovannoy-meditsinskoy-pomoschi-pri-zaderzhke-mochi
+					li http://www.rosminzdrav.ru/documents/8425-prikaz-ministerstva-zdravoohraneniya-rossiyskoy-federatsii-ot-9-noyabrya-2012-g-775n-ob-utverzhdenii-standarta-pervichnoy-mediko-sanitarnoy-pomoschi-pri-hronicheskom-prostatite
+					li http://www.rosminzdrav.ru/documents/9044-prikaz-ministerstva-zdravoohraneniya-rossiyskoy-federatsii-ot-9-noyabrya-2012-g-696n-ob-utverzhdenii-standarta-spetsializirovannoy-meditsinskoy-pomoschi-pri-ostryh-prostatite-orhite-i-epididimite
+					li https://www.ema.europa.eu/en/medicines/human/EPAR/urorec
+					li https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&amp;ApplNo=022206
+					li https://www.ema.europa.eu/en/medicines/human/EPAR/urorec
+					li https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&amp;ApplNo=022206
+					li П.В. Глыбочко, Ю.Г. Аляев, Междисциплинарные проблемы в&nbsp;урологии, руководство для врачей, Медфорум, 2015, стр.132
+					li Roehrborn CG, McConnell JD. Benign prostatic hyperplasia: etiology, pathophysiology, epidemiology, and natural history. In: Wein AJ&nbsp;et&nbsp;al. (eds) Campbell-Walsh Urology, Elsevier Saunders, Philadelphia, 9th ed&nbsp;2007
+					li Kupelian V&nbsp;et al. Association of&nbsp;urological symptoms and chronic illness in&nbsp;men and women: contributions of&nbsp;symptom severity and duration-results from the BACH Survey. J&nbsp;Urol 2009; 181: 694-700
+					li Адаптировано из&nbsp;материалов XIX конгресса Российского общества урологов, 19-21 сентября 2019, г.Ростов-на-Дону, &laquo;СНМП/ДГПЖ&nbsp;&mdash; кто лечит?&raquo; результаты российского эпидемиологического исследования, Пушкарь Д.Ю., Раснер П.И., Абоян И.А., Асфандияров Ф.Р., Котов С.В., Коган М.И., Корнеев И.А., Медведев В.Л., Неймарк А.И., Новиков А.И., Павлов В.Н., Цуканов А.Ю., Шабалкин С.А., Шорманов И.С.
+					li Tanguay S&nbsp;et&nbsp;al. Diagnosis and management of&nbsp;benign prostatic hyperplasia in&nbsp;primary care. Can Urol Assoc J&nbsp;2009; 3(2): S92-100
+					li Kirby R&nbsp;et&nbsp;al. Shared care for prostatic diseases. Isis Medical Media Ltd, Oxford, 2nd ed&nbsp;2000
+					li Hern&aacute;ndez Fern&aacute;ndez C&nbsp;et al. The importance of&nbsp;nocturia and the repercussion in&nbsp;the quality of&nbsp;sleep and quality of&nbsp;life in&nbsp;patients with benign prostatic hyperplasia. Actas Urol Esp 2007; 31: 262-269
+					li Roehrborn CG. Current medical therapies for men with lower urinary tract symptoms and benign prostatic hyperplasia: achievements and limitations. Rev Urol 2008; 10: 14-25
+					li Montorsi F. Eur Urol Suppl 2010; 9: 491-495
+					li https://grls.rosminzdrav.ru/Grls_View_v2.aspx?routingGuid=a486a508-348f-4db7-98a1-c7c4e639de42&amp;t= 07.12.2021
+					li https://grls.rosminzdrav.ru/Grls_View_v2.aspx?routingGuid=17f19e8b-59e8-4fa1-a951-045e0819ea9a&amp;t= 07.12.2021
+					li Пушкарь Д.Ю. и&nbsp;соавт., Учебное издание Урология, 2-е издание, переработанное и&nbsp;дополненное, 2016, стр.212
+					li Fusco F&nbsp;et&nbsp;al., Eur Urol 2016;69(6):1091&mdash;1101
+					li Roehrborn CG&nbsp;et&nbsp;al., Adv Ther.&nbsp;2017;33(12):2110&mdash;2121
+					li Kobayashi K&nbsp;et&nbsp;al. Orgasm is&nbsp;preserved regardless of&nbsp;ejaculatory dysfunction with selective alpha1A-blocker administration. Int J&nbsp;Impot Res 2009; 21(5): 306-310
+					li Gacci&nbsp;M. et&nbsp;al. Impact of&nbsp;medical treatments for male lower urinary tract symptoms due to&nbsp;benign prostatic hyperplasia on&nbsp;ejaculatory function: a&nbsp;systematic review and metaanalysis. J&nbsp;Sex Med.&nbsp;2014;11:1554.
+				+e.info
+					p ИНФОРМАЦИЯ ДЛЯ СПЕЦИАЛИСТОВ ЗДРАВООХРАНЕНИЯ 
+					span Имеются противопоказания. Необходимо ознакомиться с&nbsp;инструкцией. Инструкция по&nbsp;медицинскому применению лекарственного препарата Урорек, РУ&nbsp;ЛСР-005971/10 от&nbsp;25.06.2010
+

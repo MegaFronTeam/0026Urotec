@@ -1,8 +1,66 @@
 // start .sOtherCountries
 .sOtherCountries {
-		// --sPT: ;
-		// --sPB: ;
-		// --sTPB: ;
+	--sPT: #{rem(65)};
+	--sPB: #{rem(47)};
+	// --sTPB: ;
+	.section-title{
+			margin-bottom: 1.6rem;
+		}
+
+	&__agencies {
+		margin-bottom: 2rem;
+	}
+	&__agency {
+		margin-bottom: .8rem;
+		font-size: rem(16);
+		span {
+			margin-right: 18px;
+			padding: 2px 6px;
+			background-color: $orange;
+			color: $white;
+		}
+	}
+
+	&__reg {
+		margin-bottom: 1.5rem;
+		font-weight: 600;
+	}
+
+	.flags-container {		
+		margin-bottom: rem(65);
+		--bs-gutter-y: var(--bs-gutter-x);
+
+		&__item {
+			max-width: 190px;
+		}
+
+		&__img {
+			margin-bottom: 1rem;
+			width: 100%;
+			img {
+				width: 100%;
+				@include media-breakpoint-up(sm) {
+					object-fit: contain;
+				}
+			}
+		}
+
+		&__country {
+			font-size: rem(24);
+			font-weight: bold;
+			text-align: center;
+		}
+
+		&__year {
+			font-size: rem(16);
+			text-align: center;
+		}
+	}
+	
+	&__descr {
+		font-weight: 600;
+		line-height: 160%;
+	}
 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
