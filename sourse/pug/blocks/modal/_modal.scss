@@ -20,6 +20,60 @@
 		// padding-right: 40px 15px;
 	}
 
+	.alpha {
+		&__name {
+			font-size: #{rem(32)};
+			line-height: 130%;
+			span {
+				padding: 2px;			
+				color: $white;
+				font-size: #{rem(20)};
+				&:first-child {
+					background-color: $warning;
+				}
+				&:last-child {
+					background-color: #05B42C;
+				}
+			}		
+		}		
+		&:first-child {
+			span {
+				background-color: $warning;
+			}
+		}
+		&:nth-child(2) {
+			span {			
+				background-color: $blue;	
+			}
+		}
+		&:last-child {
+			span {
+				background-color: #05B42C;
+			}
+		}
+
+		.list {
+			list-style-type: none;
+			color: $secondary;
+		}
+	}
+
+	.table {
+		border-color: $blue;
+		tbody {
+			border-top: none;
+		}
+	}
+
+	thead {
+		color: $white;
+		background-color: $blue;
+	}
+
+	.note {
+		color: $secondary;
+	}
+
 	.mfp-close {
 		color: $primary;
 		font-size: 40px;
@@ -41,6 +95,15 @@ a {
 	}
 }
 
+.max-list {
+	padding: 0;
+  margin-left: 20px;
+	list-style-type: disc;
+	li::marker {
+		color: $blue;
+		background-color: $blue;
+	}
+}
 .mfp-close {
 	user-select: none; // width: 44px;
 	// height: 44px;

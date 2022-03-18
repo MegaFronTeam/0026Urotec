@@ -1,17 +1,101 @@
 
 mixin modal() 
 	//  start modals
-	a(href="modal-call").link-modal-js modal-call 
+	//- a(href="modal-call").link-modal-js modal-call 
+	//- div(id="modal-call"  style="display: none" )
+	//- 	+b.modal-win
+	//- 		+form-wrap
+	//- 			.text-center
+	//- 				+e.title.form-data.h3.ttu Обратный звонок
+	//- 				p.after-headline Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут
+
+	//- 			+input("Ваше Имя")(required)  
+	//- 			+e.BUTTON.btn.btn(type="submit"  )  
+	//- 			+policy()
+	// #modal-call
+	a(href="modal-call").link-modal-js modal-call
 	div(id="modal-call"  style="display: none" )
 		+b.modal-win
-			+form-wrap
-				.text-center
-					+e.title.form-data.h3.ttu Обратный звонок
-					p.after-headline Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут
+			p Силодозин (действующее вещество препарата Урорек), высокоселективный конкурентный антагонист альфа1А-адренорецепторов, которые в&nbsp;основном расположены в&nbsp;предстательной железе, в&nbsp;тканях дна и&nbsp;шейки мочевого пузыря, капсуле предстательной железы и&nbsp;простатической части мочеиспускательного канала.
+			p Блокада альфа1А-адренорецепторов снижает тонус гладкой мускулатуры в&nbsp;этих тканях, что ведет к&nbsp;улучшению оттока мочи из&nbsp;мочевого пузыря. Одновременно уменьшаются симптомы обструкции и&nbsp;раздражения, связанные с&nbsp;доброкачественной гиперплазией предстательной железы.<sup>6</sup>
+			.row
+				+b.alpha.col.col-md-4.col-6
+					+e.name альфа <span>1A</span> адренорепторы
+					+img("modal-row-img-1.png").res-i
+					ul.list
+						li.item Простата
+						li.item Уретра
+						li.item Мочевой пузырь
+						li.item Семенные пузырьки
+				+b.alpha.col.col-md-4.col-6
+					+e.name альфа <span>1B</span> адренорепторы
+					+img("modal-row-img-2.png").res-i
+					ul.list
+						li.item Кровеносные сосуды
+				+b.alpha.col.col-4
+					+e.name альфа <span>1D</span> адренорепторы
+					+img("modal-row-img-3.png").res-i
+					ul.list
+						li.item Мочевой пузырь
+						li.item Спинной мозг
+						li.item Носовые пазухи
+			p.h3 При ДГПЖ количество альфа1А-адренорецепторов в&nbsp;простате увеличивается<sup>18,19,20</sup>			
+			table.table.table-bordered
+				thead
+					tr
+						th(scope="col") альфа1-адренорепторы
+						th(scope="col") Нормальная ткань простаты
+						th(scope="col") ДГПЖ
+				tbody
+					tr
+						td &alpha;<sub>1A</sub>
+						td 63%
+						td 85%
+			p.h3 Количество альфа1B-адренорецепторов в&nbsp;сосудистом русле тоже увеличивается с&nbsp;возрастом*<sup>21,22,23</sup>			
+			table.table.table-bordered
+				thead
+					tr
+						th(scope="col") Возраст
+						th(scope="col") &lt;55 лет
+						th(scope="col") &ge;65 лет
+				tbody
+					tr
+						td &alpha; Экспрессия &alpha;<sub>1B</sub> адренорецепторов в сосудистом русле
+						td &alpha;<sub>1A</sub> &gt; &alpha;<sub>1B</sub>
+						td &alpha;<sub>1B</sub> &gt; &alpha;<sub>1A</sub>
+			p.note *Изменения соотношения подтипов адренорецепторов являются причиной склонности пожилых пациентов к&nbsp;нестабильности&nbsp;АД во&nbsp;время лечения альфа-адреноблокаторами<sup>24</sup>
+			p.h3 Максимальная уроселективность силодозина в&nbsp;классе альфа-адреноблокаторов обуславливает его уродинамическую эффективность и&nbsp;высокий профиль безопасности<sup>4</sup>
+			p.note Профиль связывания антагонистов &alpha;1-адренорецепторов с&nbsp;подтипами рекомбинантных альфа1-адренорецепторов человека<sup>25</sup>
+			table.table.table-bordered
+				thead
+					tr
+						th.align-top(rowspan="2") Альфа-адреноблокатор
+						th.text-center(colspan="2") Селективность к альфа1-адренорепторам
+					tr
+						th.text-center(scope="col") &alpha;1A:&alpha;1B
+						th.text-center(scope="col") &alpha;1A:&alpha;1D
+				tbody
+					tr
+						td Алфузозин
+						td 0.309:1
+						td 0.617:1
+					tr
+						td Нафтопидил
+						td 0.372:1
+						td 0.209:1
+					tr
+						td Тамсулозин
+						td 9.55:1
+						td 2.51:1
+					tr
+						td Силодозин
+						td 162:1
+						td 55:1
+			p.note В&nbsp;исследованиях in&nbsp;vitro было показано, что сродство силодозина к&nbsp;альфа1A-адренорецепторам в&nbsp;162 раза превосходит его способность взаимодействовать с&nbsp;альфа1B-адренорецепторами, которые расположены в&nbsp;гладких мышцах сосудов. Благодаря высокой селективности силодозин не&nbsp;вызывает клинически значимого снижения артериального давления (АД)<sup>6</sup>
+			p.h3 Максимальная уроселективность обеспечивает:<sup>25,26</sup>
+			ul.max-list
+				li Быстрое начало действия
+				li Эффективное снятие СНМП
+				li Минимум побочных эффектов со&nbsp;стороны сердечно-сосудистой системы
 
-				+input("Ваше Имя")(required)  
-				+e.BUTTON.btn.btn(type="submit"  )  
-				+policy()
-	// #modal-call
-	
 	// end modals
