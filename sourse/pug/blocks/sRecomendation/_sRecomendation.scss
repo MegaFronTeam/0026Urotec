@@ -7,10 +7,9 @@
 	.ref-item {
 
 		&__link {
-			padding-bottom: 2px;
+			// padding-bottom: 2px;
 			line-height: 130%;
-			text-decoration: underline;
-			// border-bottom: 1px solid $blue;
+			border-bottom: 1px solid $blue;
 		}
 
 		&__descr {

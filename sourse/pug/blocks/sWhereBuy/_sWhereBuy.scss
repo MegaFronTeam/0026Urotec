@@ -12,9 +12,13 @@
 			}
 		}
 
+
 		&__row {
-			--bs-gutter-x:  #{rem(53)};
-			--bs-gutter-y:  #{rem(48)};
+			@include media-breakpoint-up(xl) {
+				--bs-gutter-x:  #{rem(53)};
+				--bs-gutter-y:  #{rem(48)};
+			}			
+			--bs-gutter-y: var(--bs-gutter-x);
 		}
 
 		

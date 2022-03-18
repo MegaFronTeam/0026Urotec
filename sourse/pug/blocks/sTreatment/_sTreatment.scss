@@ -1,7 +1,7 @@
 // start .sTreatment
 .sTreatment {
 	--sPT: #{rem(78)};
-	--sPB: #{rem(311)};
+	--sPB: 0;
 	--sTPB: 1.5rem;
 	background-color: $light;
 
@@ -14,7 +14,8 @@
 	}
 
 	.row {
-		--bs-gutter-y: #{rem(30)}	
+		--bs-gutter-y: #{rem(30)};	
+		margin-bottom: 86px;
 	}
 
 	.treatment-item {
@@ -27,22 +28,28 @@
 	}
 
 	&__video {
-		position: absolute;
-		left: var(--bs-gutter-x,.8rem);
-		right: var(--bs-gutter-x,.8rem);
-		top: 110%;
-		height: 512px;
+		@include block(1120,512);
+		position: relative;
 		text-align: center;
-		background-color: #293741;
-		@include media-breakpoint-up(lg) {
-			top: 113%;
-		}	
-		@include media-breakpoint-up(md) {
-			top: 110%;
-		}	
-		@include media-breakpoint-up(sm) {
-			top: 105%;
+		z-index: 2;
+			&::after {
+				content: '';
+				position: absolute;
+				top: 44%;
+				height: 56%;
+				left: -100vw;
+				width: 300vw;
+				background-color: #004CAC;
+				z-index: -1;
+			}
+		iframe {
+			position: absolute;
+			top: 0;			
+			left: 0;
+			width: 100% !important;
+			height: 100% !important;
 		}
+		
 		img {			
 			width: 226px;
 			position: relative;
