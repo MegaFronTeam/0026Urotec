@@ -12,29 +12,30 @@ mixin footer()
 				.col-1.cr &copy;&nbsp;2021
 			+b.footer-bottom
 				.row
-					.col-12.col-xl-3.col-lg-4.col-sm-6
+					.col-xl-3.col-sm-auto
 						+e.title Адрес:
 						+e.addr
 							p 123610&nbsp;г. Москва,
 							p Краснопресненская наб., д.&nbsp;12,
 							p под.&nbsp;7, эт.&nbsp;6, пом. IАЖ
-					.col-12.col-xl-3.col-lg-4.col-sm-6
+					.col-sm
 						+e.title Контакты:
 						+e.addr
 							p тел.: +7 (495) 225-80-01
 							p факс: +7 (495) 258-20-07
 							p E-mail: info@rusfic.com
-					.col
-						ul.footer__links
-							li
-								a(href="#") Политика конфиденциальности
-							li
-								a(href="#") Инструкция к&nbsp;препарату
-							li
-								a(href="#") Контакты
+					.col-sm-auto
+						.footer__links
+							ul
+								li
+									a(href="#") Политика конфиденциальности
+								li
+									a(href="#") Инструкция к&nbsp;препарату
+								li
+									a(href="#") Контакты
 			+b.sources
 				h2 Источники 
-				button.btn.btn-link Свернуть список
+				button.btn.btn-link.btn-toggle--js Свернуть список
 				ol
 					li https://grls.rosminzdrav.ru/Grls_View_v2.aspx?routingGuid=89a66596-ce1d-454a-a356-5d4a4a0b191e&amp;t= 07.12.2021
 					li Котов С.В., Богданов Д.А. Силодозин&nbsp;&mdash; место в&nbsp;лечении СНМП/ДГПЖ с&nbsp;позиции доказательной медицины и&nbsp;реальной практики. Урология.&nbsp;2021;5:94&mdash;98

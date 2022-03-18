@@ -31,17 +31,20 @@
 				position: relative;
 				&::before {
 					position: absolute;
-					top: calc(rem(29) + 16px);
+					// top: calc(rem(29) + 16px);
+					margin-top: em(6);
 					left: 0;
 					content: '';
 					display: inline-block;
 					@include triangle(16px 12px, $warning, right);
+					@include mt;
 				}
 			}			
 			&.active {
 				.dd-group__head {
 					&::before {
-						@include triangle(16px 12px, $warning, down);
+						// @include triangle(16px 12px, $warning, down);
+						transform: rotateX(360deg) rotate(90deg);
 					}
 				}				
 			}			

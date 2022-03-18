@@ -10,7 +10,7 @@ mixin sCatalog(data)
 				mixin item(t,i,d,l)
 						+e.col.col-md-6.col-lg-4 
 							+e.item.d-flex.flex-column.align-items-center
-								+e.title!= t								
+								+e.title!= t
 								+e.img.img-wrap.text-center
 									img(src=`img/catalog-img-${i}.png`, laoding="lazy" alt="")
 								+e.descr.text-center!= d

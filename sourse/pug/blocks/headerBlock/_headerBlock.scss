@@ -44,6 +44,7 @@
 		@include media-breakpoint-up(md) {
 		max-width: rem(560px);
 		position: relative;
+		z-index: 2;
 		}
 		img{
 			@include media-breakpoint-down(md) {
@@ -56,6 +57,7 @@
 				top: 0;
 				position: absolute;
 				margin-bottom: 0;
+				z-index: -1;
 			}
 			margin-bottom: 1.5rem;
 			// @extend .res-i;
