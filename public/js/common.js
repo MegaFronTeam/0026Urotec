@@ -294,7 +294,14 @@ function eventHandler() {
 	
 
 	$(".btn-toggle--js").click(function () {
-		$(".sources ol").slideToggle();
+		$(".sources ol").slideToggle(function() {
+			if ($(".sources ol").is(":visible")) {
+				$(".btn-toggle--js").text('Свернуть список')
+			} else {
+				$(".btn-toggle--js").text('Развернуть список')
+			}
+		});
+		
 	})
 
 };
