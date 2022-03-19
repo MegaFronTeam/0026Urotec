@@ -1,7 +1,7 @@
 // start .sFAQ
 .sFAQ {
 		--sPT: #{rem(133)};
-		// --sPB: ;
+		--sPB: #{rem(23)};
 		--sTPB: #{rem(45)};
 	background-color: #004CAC;
 	color: $white;
@@ -19,6 +19,9 @@
 		}
 
 		&__content {
+			&:not(.active) {
+				display: none;
+			}
 			p {
 				margin-bottom: rem(32);
 			}

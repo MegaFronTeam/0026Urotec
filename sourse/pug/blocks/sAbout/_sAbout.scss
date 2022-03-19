@@ -5,7 +5,7 @@
 	position: relative;
 	z-index: 2;
 	--sPT: #{rem(82)};
-	--sPB: #{rem(65)};
+	--sPB: #{rem(63)};
 	--sTPB: #{rem(57)};
 	
 	@include media-breakpoint-up(lg) {
@@ -87,7 +87,7 @@
 		}
 
 		p {
-			margin-bottom: 2.5rem;
+			margin-bottom: 5rem;
 		}
 	}
 

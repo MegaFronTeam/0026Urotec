@@ -75,8 +75,13 @@
 		}
 	}
 
+	.table-wrap {
+		overflow-x: auto;
+	}
+
 	.table {
 		border-color: $blue;
+		min-width: 336px;
 		tbody {
 			border-top: none;
 		}

@@ -9,10 +9,13 @@
 			}
 	
 		}
-	.row:not(:last-child) {
+	&__row {
 		margin-bottom: rem(50);
-		--bs-gutter-x:  #{rem(39)};
-		--bs-gutter-y:  #{rem(48)};
+		--bs-gutter-y:  var(--bs-gutter-x);
+		@include media-breakpoint-up(lg) {
+			--bs-gutter-x:  #{rem(39)};
+			--bs-gutter-y:  #{rem(48)};
+		}
 		
 
 		.col {
