@@ -13,7 +13,10 @@
 	position: relative;
 	width: rem(1500);
 	// min-height: 100%; 
-	padding: 40px;
+	padding: 15px;
+	@include media-breakpoint-up(sm) {
+		padding: 40px;
+	}
 
 	.modal-content {
 		// max-width: 485px;
@@ -21,9 +24,15 @@
 	}
 
 	.alpha {
-		&__name {
-			font-size: #{rem(32)};
+		&__name {			
 			line-height: 130%;
+			font-size: #{rem(20)};
+			margin-bottom: 5px;
+			@include media-breakpoint-up(sm) {
+				font-size: #{rem(32)};
+				margin-bottom: 0;
+			}
+		
 			span {
 				padding: 2px;			
 				color: $white;
@@ -55,6 +64,14 @@
 		.list {
 			list-style-type: none;
 			color: $secondary;
+			li {
+				@include media-breakpoint-up(xs) {
+					line-height: 18px;
+				}
+				@include media-breakpoint-up(sm) {
+					line-height: 160%;
+				}
+			}
 		}
 	}
 
@@ -68,6 +85,10 @@
 	thead {
 		color: $white;
 		background-color: $blue;
+	}
+
+	.break {		
+		word-break: break-all;
 	}
 
 	.note {
@@ -162,6 +183,10 @@ a {
 			display: none;
 		}
 	}
+}
+
+.carousel__button .is-close {
+	color: black;
 }
 
 

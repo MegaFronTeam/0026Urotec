@@ -21,9 +21,11 @@ mixin footer()
 					.col-sm
 						+e.title Контакты:
 						+e.addr
-							p тел.: +7 (495) 225-80-01
+							p 
+								a(href="tel:+74952258001") тел.: +7 (495) 225-80-01
 							p факс: +7 (495) 258-20-07
-							p E-mail: info@rusfic.com
+							p
+								a(href="mailto: info@rusfic.com") E-mail: info@rusfic.com
 					.col-sm-auto
 						.footer__links
 							ul
