@@ -12,6 +12,10 @@
 			}
 		}
 
+		.row {
+			--bs-gutter-y: var(--bs-gutter-x);
+		}
+
 		.section-descr {
 			margin-bottom: 0.7rem;
 			@include rfs(24px);
@@ -25,10 +29,6 @@
 			margin-bottom: 1.3rem;
 			font-size: 12px;
 		}
-
-	&__col {
-		margin-bottom: 1rem;
-	}
 
 	&__item {	
 		position: relative;

@@ -21,7 +21,7 @@ block pagecontent
 			mixin btn(id, name)
 				.col-auto.mb-2
 					a.btn.btn-primary(href=`#` data-src=id data-fancybox="modal")= name
-			+btn("modal-call", "modal-call")
-			+btn("modal-call-first", "modal-call")
-			+btn("modal-call-second", "modal-call")
+			//- +btn("modal-call", "modal-call")
+			+btn("modal-call-first", "Модальное окно со спсиком")
+			+btn("modal-call-second", "Модальное окно с таблицей")
 
