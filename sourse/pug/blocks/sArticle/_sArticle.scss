@@ -1,0 +1,40 @@
+// start .sArticle
+.sArticle {
+		// --sPT: ;
+		// --sPB: ;
+		--sTPB: #{rem(25)};
+	.icon {
+		font-size: rem(28);
+	}
+
+	small {
+		display: block;
+		margin-bottom: rem(37);
+		font-size: 16px;
+		color: $secondary;
+	}
+
+	img {
+		margin-bottom: rem(50);
+		width: 100%;
+		border-radius: 8px;
+	}
+
+	p {
+		margin-bottom: rem(50);
+		color: $secondary;
+	}
+
+	h3 {
+		font-size: rem(28);
+		font-weight: 700;
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sArticle

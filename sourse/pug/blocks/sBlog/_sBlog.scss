@@ -1,0 +1,61 @@
+// start .sBlog
+.sBlog {
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+	.row {
+		--bs-gutter-y: #{rem(36)};
+		margin-bottom: rem(62);
+	}
+
+	&__img {
+		margin-bottom: rem(24);
+		border-radius: 8px;
+		img {
+			width: 100%;
+			object-fit: cover;			
+		}
+	}
+
+	&__title {
+		margin-bottom: rem(16);
+		color: $blue;
+		font-weight: 700;
+		line-height: 150%;
+	}
+
+	&__date {
+		font-size: rem(16);
+		color: $secondary;
+	}
+
+	.page-numbers {
+		justify-content: center;
+		li {		
+			margin-left: 4px;
+			margin-right: 4px;
+			width: 30px;
+			height: 30px;
+			box-sizing:border-box;
+			border: 1px solid $blue;
+			border-radius: 4px;
+			text-align: center;
+			line-height: 28px;
+		}
+		a {
+			font-size: 14px;
+			font-weight: 500;
+			padding: 0;
+			border: none;
+			border-radius: 4px;
+		}
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sBlog

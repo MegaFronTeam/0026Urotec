@@ -99,7 +99,7 @@
 			line-height: 140%;
 		}
 
-		&__info {
+		&__info {	
 			p {
 				margin-bottom: 0;
 				text-transform: uppercase;
@@ -111,7 +111,8 @@
 				}
 			}
 			span {
-				display: block;
+				display: block;						
+				margin-bottom: 20px;
 				text-transform: capitalize;
 				font-size: 12px;
 				line-height: 1.2;	
