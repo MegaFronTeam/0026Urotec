@@ -33,6 +33,19 @@
 		font-weight: 700;
 	}
 
+	&__list {
+		@include media-breakpoint-up(lg) {
+			flex-direction: column;
+		}
+		display: flex;
+		.blogItem:first-child {
+			@include media-breakpoint-up(lg) {
+				margin-right: 0;
+			}
+			margin-right: rem(20);
+		}
+	}
+
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
