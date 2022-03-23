@@ -7,6 +7,10 @@
 		margin-bottom: rem(33);
 		font-size: rem(16);
 		stroke: $black;
+		transition: stroke .3s ease-in-out;
+		&:hover {
+			stroke: $blue;
+		}
 	}
 
 	small {
