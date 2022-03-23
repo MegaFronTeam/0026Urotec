@@ -1,19 +1,47 @@
 // start .sBlog
 .sBlog {
-		// --sPT: ;
-		// --sPB: ;
+		--sPT: #{rem(61)};
+		--sPB: 0;
 		// --sTPB: ;
 	.row {
-		--bs-gutter-y: #{rem(36)};
-		margin-bottom: rem(62);
+		// --bs-gutter-y: #{rem(36)};
+		margin-bottom: rem(28);
+	}	
+
+	.page-numbers {
+		font-size: 14px;
+		font-weight: 500;
+		border-radius: 4px;		
+		li {		
+			margin-left: 4px;
+			margin-right: 4px;
+		}
 	}
 
-	&__img {
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sBlog
+
+.blogItem {
+	display: block;
+	margin-bottom: rem(36);
+	&__img-wrap {
+		@include block(352, 184);
 		margin-bottom: rem(24);
 		border-radius: 8px;
+		overflow: hidden;
 		img {
+			position: absolute;
 			width: 100%;
-			object-fit: cover;			
+			height: 100%;		
+			margin: 0;
+			left: 0;
+			top: 0;	
 		}
 	}
 
@@ -28,34 +56,4 @@
 		font-size: rem(16);
 		color: $secondary;
 	}
-
-	.page-numbers {
-		justify-content: center;
-		li {		
-			margin-left: 4px;
-			margin-right: 4px;
-			width: 30px;
-			height: 30px;
-			box-sizing:border-box;
-			border: 1px solid $blue;
-			border-radius: 4px;
-			text-align: center;
-			line-height: 28px;
-		}
-		a {
-			font-size: 14px;
-			font-weight: 500;
-			padding: 0;
-			border: none;
-			border-radius: 4px;
-		}
-	}
-
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-between(md, xl) {}
-	@include media-breakpoint-only(xl) {}
-	@include media-breakpoint-down(xl) {}
-} // end.sBlog
+}

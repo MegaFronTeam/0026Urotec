@@ -25,6 +25,10 @@ html{
 }
 
 body {
+	font-feature-settings: 'pnum' on, 'lnum' on;
+	&:not(.main-page) {
+		padding-top: rem(112);
+	}
 	&.fixed,
 	&.fancybox-active{
 		.header{ 

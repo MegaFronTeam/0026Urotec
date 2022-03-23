@@ -1,10 +1,12 @@
 // start .sArticle
 .sArticle {
-		// --sPT: ;
-		// --sPB: ;
+		--sPT: #{rem(66)};
+		--sPB: 0;
 		--sTPB: #{rem(25)};
 	.icon {
-		font-size: rem(28);
+		margin-bottom: rem(33);
+		font-size: rem(16);
+		stroke: $black;
 	}
 
 	small {
@@ -26,7 +28,8 @@
 	}
 
 	h3 {
-		font-size: rem(28);
+		margin-bottom: rem(32);
+		font-size: rem(24);
 		font-weight: 700;
 	}
 
