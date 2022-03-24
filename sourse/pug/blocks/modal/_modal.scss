@@ -190,10 +190,23 @@ a {
 	}
 }
 
-.carousel__button .is-close {
-	color: black;
+.enter-modal {
+	max-width: 492px;
+	h3 {
+		color: #292929;
+	}
+	p {
+		color: $secondary;
+	}
+	.btn-warning {
+		text-transform: capitalize;
+		border-radius: 10px;
+		background-color: #ED6B23;
+		&:hover {
+			background-color: $warning;
+		}
+	}
 }
-
 
 // 
 @include media-breakpoint-up(xl) {}
