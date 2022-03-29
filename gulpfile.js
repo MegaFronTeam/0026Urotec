@@ -1,5 +1,5 @@
 'use strict';
-let  publicPath = 'public',
+let  publicPath = 'wordpress/wp-content/themes/mega/public',
     sourse = 'sourse',
     destSprite = '../_sprite.scss'
 
