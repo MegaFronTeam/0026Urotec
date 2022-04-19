@@ -13,11 +13,85 @@
 	position: relative;
 	width: rem(1500);
 	// min-height: 100%; 
-	padding: 40px;
+	padding: 15px;
+	@include media-breakpoint-up(sm) {
+		padding: 40px;
+	}
 
 	.modal-content {
 		// max-width: 485px;
 		// padding-right: 40px 15px;
+	}
+
+	.alpha {
+			li {
+			list-style: none;
+			color: $secondary;
+			line-height: 160%;
+			}
+		&__name {			
+			line-height: 130%;
+			font-size: #{rem(20)};
+			margin-bottom: 5px;
+			@include media-breakpoint-up(sm) {
+				font-size: #{rem(32)};
+				margin-bottom: 0;
+			}
+		
+			span {
+				padding: 2px;			
+				color: $white;
+				font-size: #{rem(20)};
+				&:first-child {
+					background-color: $warning;
+				}
+				&:last-child {
+					background-color: #05B42C;
+				}
+			}		
+		}		
+		&:first-child {
+			span {
+				background-color: $warning;
+			}
+		}
+		&:nth-child(2) {
+			span {			
+				background-color: $blue;	
+			}
+		}
+		&:last-child {
+			span {
+				background-color: #05B42C;
+			}
+		}
+
+
+	}
+
+	.table-wrap {
+		overflow-x: auto;
+	}
+
+	.table {
+		border-color: $blue;
+		min-width: 336px;
+		tbody {
+			border-top: none;
+		}
+	}
+
+	thead {
+		color: $white;
+		background-color: $blue;
+	}
+
+	.break {		
+		word-break: break-all;
+	}
+
+	.note {
+		color: $secondary;
 	}
 
 	.mfp-close {
@@ -41,6 +115,9 @@ a {
 	}
 }
 
+.max-list {
+
+}
 .mfp-close {
 	user-select: none; // width: 44px;
 	// height: 44px;
@@ -83,6 +160,18 @@ a {
 	}
 }
 
+
+.modal-win{
+	ul{
+		padding: 0;
+		margin-left: 20px;
+		list-style-type: disc;
+		li::marker {
+			color: $blue;
+			background-color: $blue;
+		}
+	}
+}
 @include media-breakpoint-up(sm) {
 	.modal-text {
 		max-width: 1000px;
@@ -101,6 +190,23 @@ a {
 	}
 }
 
+.enter-modal {
+	max-width: 492px;
+	h3 {
+		color: #292929;
+	}
+	p {
+		color: $secondary;
+	}
+	.btn-warning {
+		text-transform: capitalize;
+		border-radius: 10px;
+		background-color: #ED6B23;
+		&:hover {
+			background-color: $warning;
+		}
+	}
+}
 
 // 
 @include media-breakpoint-up(xl) {}

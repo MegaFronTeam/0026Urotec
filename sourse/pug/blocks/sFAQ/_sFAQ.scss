@@ -1,14 +1,14 @@
 // start .sFAQ
 .sFAQ {
 		--sPT: #{rem(133)};
-		// --sPB: ;
+		--sPB: #{rem(23)};
 		--sTPB: #{rem(45)};
 	background-color: #004CAC;
 	color: $white;
 
 	.dd-group {
 		&__item {
-			margin-bottom: rem(29);
+			padding-bottom: rem(29);
 		}
 
 		&__head {
@@ -19,6 +19,9 @@
 		}
 
 		&__content {
+			&:not(.active) {
+				display: none;
+			}
 			p {
 				margin-bottom: rem(32);
 			}

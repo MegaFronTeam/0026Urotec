@@ -23,7 +23,7 @@
 	}
 
 	&-bottom {
-		margin-bottom: 55px;
+		margin-bottom: 47px;
 		.row {
 			--bs-gutter-y: #{rem(28)};
 		}
@@ -35,12 +35,15 @@
 
 		&__addr {
 			font-size: 14px;
-			line-height: 140%;
+			line-height: 133%;
 			@include media-breakpoint-up(sm) {
 				font-size: 16px;				
 			}
 			p {
-				margin-bottom: 0;
+				margin-bottom: 0;				
+				a {
+					color: black;
+				}
 			}
 		}
 	}
@@ -55,6 +58,7 @@
 			@include media-breakpoint-up(md) {
 				display: block;
 				text-align: right;
+				margin-top: 8px;
 			}		
 		}
 		font-size: 10px;
@@ -95,7 +99,7 @@
 			line-height: 140%;
 		}
 
-		&__info {
+		&__info {	
 			p {
 				margin-bottom: 0;
 				text-transform: uppercase;
@@ -107,7 +111,8 @@
 				}
 			}
 			span {
-				display: block;
+				display: block;						
+				margin-bottom: 20px;
 				text-transform: capitalize;
 				font-size: 12px;
 				line-height: 1.2;	

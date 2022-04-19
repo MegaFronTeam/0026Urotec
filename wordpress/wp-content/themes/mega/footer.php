@@ -23,88 +23,113 @@ global $get_template_directory_uri,
 		 $link11 = get_field('политика_конфиденциальности', 'option');
 
 ?>
-<footer class="footer animate__fadeIn animate__animated wow">
+<footer class="footer">
     <div class="container">
-        <div class="row">
-            <div class="col">
-	            <?php wp_nav_menu( [
-		            'theme_location'  => 'menu-footer'
-	            ] ); ?>
-            </div>
-            <div class="footer__col col-lg-3 d-flex flex-column">
-                <div class="footer__title order-lg-0 order-1">Офис:
+        <div class="footer-top wow animate__fadeIn row">
+            <div class="col col-3">
+                <div class="footer-top__logo">
+                    <a href="/">
+                        <?php
+                        $image1 = get_field('лого_в_подвале', 'option');
+                        $size = 'full'; // (thumbnail, medium, large, full or custom size)
+                        if( $image1 ) {
+                            echo wp_get_attachment_image( $image1, $size, );
+                        } ?>
+                    </a>
                 </div>
-                <div class="footer__caption order-lg-1 order-2"><?= $adr_global; ?></div>
-                <a class="footer__policy order-lg-2 order-0" href="<?= $link11 ; ?>">Политика конфиденциальности
-                </a>
             </div>
-            <div class="col-lg-2">
-                <div class="footer__title">Режим работы:
+            <div class="col-12 col-sm-3">Организация, принимающая претензии: ООО&laquo;Русфик&raquo;, группа компаний Recordati</div>
+            <div class="col-12 col-sm-5 contr">
+                <p>Имеются противопоказания. Необходимо ознакомиться с&nbsp;инструкцией. Инструкция по&nbsp;медицинскому применению лекарственного препарата Урорек, РУ&nbsp;ЛСР-005971/10 от&nbsp;25.06.2010</p>
+            </div>
+            <div class="col-1 cr">&copy;&nbsp;<?php   echo  date('Y');?></div>
+        </div>
+        <div class="footer-bottom wow animate__fadeIn">
+            <div class="row">
+                <div class="col-xl-3 col-sm-auto">
+                    <div class="footer-bottom__title">Адрес:
+                    </div>
+                    <div class="footer-bottom__addr">
+                        <p><?= $adr_global;?></p>
+                    </div>
                 </div>
-                <div class="footer__caption"><?= $time_work_global; ?></div>
-            </div>
-            <div class="col-auto">
-                <a class="footer__tel" href="tel:<?= $phone_link_global1?>"><?= $phone_global1?>
-                </a><br/>
-                <a class="footer__tel" href="tel:<?= $phone_link_global2?>"><?= $phone_global2?>
-                </a>
+                <div class="col-sm">
+                    <div class="footer-bottom__title">Контакты:
+                    </div>
+                    <div class="footer-bottom__addr">
+                        <p> <a href="tel:<?= $phone_link_global1;?>">тел.: <?= $phone_global1;?></a></p>
+                        <p>факс: <?= $phone_global2;?></p>
+                        <p><a href="mailto:<?= $email_global1;?>">E-mail: <?= $email_global1;?></a></p>
+                    </div>
+                </div>
+                <div class="col-sm-auto">
+                    <div class="footer__links">
+											<?php wp_nav_menu( [
+													'theme_location'  => 'menu-footer',
+													'container' => '',
+													'menu_class' => '',
+											] ); ?>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="small text-white text-center">Вся представленная на&nbsp;сайте информация носит информационный характер и&nbsp;ни&nbsp;при каких условиях не&nbsp;является публичной офертой,определяемой положениями Статьи 437(2) Гражданского кодекса РФ.Использование материалов, размещенных на&nbsp;данном сайте, возможно только с&nbsp;письменного согласия правообладателя. Авторские права наданный сайт принадлежат ИП Николаев и&nbsp;защищены действующим законодательством&nbsp;РФ.</div>
+        <div class="sources">
+            <h2>Источники </h2>
+            <button class="btn btn-link btn-toggle--js">Свернуть список</button>
+					<?php the_field('источники','options'); ?>
+            <div class="sources__info">
+                <p>ИНФОРМАЦИЯ ДЛЯ СПЕЦИАЛИСТОВ ЗДРАВООХРАНЕНИЯ </p><span>Имеются противопоказания. Необходимо ознакомиться с&nbsp;инструкцией. Инструкция по&nbsp;медицинскому применению лекарственного препарата Урорек, РУ&nbsp;ЛСР-005971/10 от&nbsp;25.06.2010</span>
+            </div>
+        </div>
     </div>
 </footer>
-<div class="modal-cookies" id="modal-cookies" style="display: none">
-    <div class="modal-cookies__caption">Этот сайт использует файлы cookie для хранения данных. Продолжая использовать сайт, вы&nbsp;даете свое согласие на&nbsp;работу с&nbsp;этими файлами.
-    </div>
-    <button class="modal-cookies__btn modal-close-js btn-cookie" type="button">ПРИНИМАЮ
-    </button>
-    <!-- picture-->
-    <picture>
-        <source type="image/webp" srcset="<?php echo $get_template_directory_uri?>/public/img/@2x/webp/modal-thanks.webp" media="(min-width:576px)"/>
-        <source type="image/webp" srcset="<?php echo $get_template_directory_uri?>/public/img/@1x/webp/modal-thanks.webp"/>
-        <source type="image/jpg" srcset="<?php echo $get_template_directory_uri?>/public/img/@2x/modal-thanks.jpg" media="(min-width:576px)"/>
-        <img class="object-fit-js" src="<?php echo $get_template_directory_uri?>/public/img/@2x/modal-thanks.jpg" alt="" loading="lazy"/>
-    </picture>
-    <!-- /picture-->
-    <div class="bg-text">Cookie</div>
 </div>
-</div>
-<div class="modal-cookies modal-cookies--thanks" id="modal-thanks" style="display: none">
-    <div class="modal-cookies__caption">
-        <div class="h4">Мы получили вашу заявку</div>
-        <br>
-        Мы свяжемся с вами <br> в скором времени
-        <br>
-        <br>
-        <br>
-    </div
-    <!-- picture-->
-    <picture>
-        <source type="image/webp" srcset="<?php echo $get_template_directory_uri?>/public/img/@2x/webp/modal-cookie.webp" media="(min-width:576px)"/>
-        <source type="image/webp" srcset="<?php echo $get_template_directory_uri?>/public/img/@1x/webp/modal-cookie.webp"/>
-        <source type="image/jpg" srcset="<?php echo $get_template_directory_uri?>/public/img/@2x/modal-cookie.jpg" media="(min-width:576px)"/>
-        <source type="image/jpg" srcset="<?php echo $get_template_directory_uri?>/public/img/@1x/modal-cookie.jpg"/>
-        <img class="object-fit-js" src="<?php echo $get_template_directory_uri?>/public/img/@2x/modal-cookie.jpg" alt="" loading="lazy"/>
-    </picture>
-    <!-- /picture-->
-    <div class="bg-text">Thank you</div>
-</div>
-</div>
-
 <!--  start modals-->
-<div class="modal-win" id="modal-call" style="display: none">
-    <div class="form-wrap">
-        <div class="before animate__heartBeat animate__animated wow" data-wow-delay="1s"></div>
-            <div class="text-center">
-                <div class="form-wrap__title form-data h3 ttu">Рассчитать проект? </div>
-                <p class="after-headline">Оставьте заявку и мы <br> сделаем расчет</p>
-            </div>
-	    <?php  echo do_shortcode( '[contact-form-7 id="464" title="Форма"]' );?>
+<!-- #modal-call-second-->
+<div id="modal-call-second" style="display: none">
+    <div class="modal-win">
 
+        <?php the_field('текст_вверху','options'); ?>
+        <div class="row">
+          <?php
+                if( have_rows('столбик','options') ): while ( have_rows('столбик','options') ) :
+                the_row();
+                ?>
+                <div class="alpha col col-md-4 col-6">
+                    <div class="alpha__name"><?php the_sub_field('заголовок'); ?></div>
+                    <?php the_sub_field('текст'); ?>
+                </div>
+			<?php  endwhile;  else :  endif;  ?>
+        </div>
+			<?php the_field('текст-мод2','options'); ?>
     </div>
 </div>
-<!-- #modal-call-->
-<!-- end modals-->
+<!-- /#modal-call-second-->
+
+<!-- #modal-call-first-->
+<div id="modal-call-first" style="display: none">
+    <div class="modal-win modal-win--first">
+			<?php the_field('текст-мод','options'); ?>
+    </div>
+</div>
+<!-- /#modal-call-first// #modal-call-first -->
+<!-- #modal-call-first-->
+<div id="modal-call-3" style="display: none">
+    <div class="modal-win modal-win--first">
+			<?php the_field('текст-мод_3','options'); ?>
+    </div>
+</div>
+<!-- /#modal-call-third// #modal-call-third
+-->
+<div id="enter-modal" style="display: none">
+    <div class="modal-win enter-modal">
+        <h3>Уважаемый посетитель</h3>
+        <p>Представленная на&nbsp;сайте информация относится к&nbsp;лекарственным препаратам отпускаемым по&nbsp;рецепту врача.</p>
+        <p>Нажимая &laquo;подтверждаю&raquo; Вы&nbsp;подтверждаете что являетесь фармацевтическим или медицинским работником</p>
+        <button class="btn btn-warning modal-close-js">Подтверждаю</button>
+    </div>
+</div>
+<!-- /#modal-call-first-->
 
 <?php wp_footer(); ?>
  

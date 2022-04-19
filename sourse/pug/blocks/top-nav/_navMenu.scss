@@ -21,11 +21,13 @@
 		font-weight: 600;
 		font-size: 14px;
 		color: #fff;
-		&:hover{
-			opacity: 0.6;
-		}
+
 		display: block;
 		padding: rem(5) calc(var(--bs-gutter-x) / 2);
+	}
+	.current-menu-item a,
+	a:hover{
+		color: #F7941D;
 	}
 }
 

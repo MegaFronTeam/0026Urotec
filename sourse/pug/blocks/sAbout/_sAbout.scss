@@ -5,7 +5,7 @@
 	position: relative;
 	z-index: 2;
 	--sPT: #{rem(82)};
-	--sPB: #{rem(65)};
+	--sPB: #{rem(63)};
 	--sTPB: #{rem(57)};
 	
 	@include media-breakpoint-up(lg) {
@@ -87,16 +87,14 @@
 		}
 
 		p {
-			margin-bottom: 2.5rem;
+			margin-bottom: 5rem;
 		}
 	}
 
-	.symptoms-list {
+	.symptoms-list {		
+		--bs-gutter-y:  #{rem(48)};
 		&__item {
-			display: flex;
-			flex-direction: column;
-			align-items:center;
-			--bs-gutter-y:  #{rem(48)};
+			text-align: center;
 		}
 
 		img {
@@ -104,7 +102,7 @@
 		}
 
 		&__title {
-			font-size: 16px;
+			font-size: rem(16);
 			text-align: center;
 		}
 	}

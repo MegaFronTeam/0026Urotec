@@ -1,7 +1,7 @@
 // start .sWhereBuy
 .sWhereBuy {
 	background: $light;
-		--sPT: 0;
+		--sPT: #{rem(20)};
 		--sPB: #{rem(104)};
 		
 		.section-title{
@@ -24,13 +24,17 @@
 		
 		&__item {	
 			display: flex;
-			height: 120px;
+			height: 100px;
+			padding: 10px;
 			justify-content: center;
 			align-items: center;		
-			padding: 25px 30px;
 			width: 100%;
 			background: $white;
-			border-radius: 4px;	
+			border-radius: 4px;
+			@include media-breakpoint-up(sm) {
+				padding: 25px 30px;	
+				height: 120px;			
+			}	
 			img {
 				flex-shrink: 0;
 			}

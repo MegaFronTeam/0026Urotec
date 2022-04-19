@@ -35,7 +35,7 @@ $output-bourbon-deprecation-warnings: false;
 // @import "./node_modules/bootstrap/scss/images";
 @import "./node_modules/bootstrap/scss/containers";
 @import "./node_modules/bootstrap/scss/grid";
-// @import "./node_modules/bootstrap/scss/tables";
+@import "./node_modules/bootstrap/scss/tables";
 @import "./node_modules/bootstrap/scss/forms";
 @import "./node_modules/bootstrap/scss/buttons";
 // @import "./node_modules/bootstrap/scss/transitions";
@@ -77,26 +77,26 @@ $output-bourbon-deprecation-warnings: false;
 // 		}
 // 	}
 // }
-// @import "./node_modules/bootstrap/scss/pagination";
+@import "./node_modules/bootstrap/scss/pagination";
 
-// .pagination-wrapper ul {
-// 	@extend .pagination;
-// }
+.pagination-wrapper ul {
+	@extend .pagination;
+}
 
-// .pagination-wrapper li .page-numbers {
-// 	@extend .page-link;
-// }
+.pagination-wrapper li .page-numbers {
+	@extend .page-link;
+}
 
-// .pagination-wrapper li {
-// 	@extend .page-item;
+.pagination-wrapper li {
+	@extend .page-item;
 
-// 	.current {
-// 		z-index: 1;
-// 		// color: $pagination-active-color;
-// 		// background-color: $pagination-active-bg;
-// 		// border-color: $pagination-active-border-color;
-// 	}
-// }
+	.current {
+		z-index: 1;
+		// color: $pagination-active-color;
+		// background-color: $pagination-active-bg;
+		// border-color: $pagination-active-border-color;
+	}
+}
 @import "root";
 @import "base";
 
@@ -125,6 +125,8 @@ $output-bourbon-deprecation-warnings: false;
 @import '../pug/blocks/sComplications/_sComplications';
 @import '../pug/blocks/sTreatment/_sTreatment';
 @import '../pug/blocks/sFAQ/_sFAQ';
+@import '../pug/blocks/sBlog/_sBlog';
+@import '../pug/blocks/sArticle/_sArticle';
 
 @import "media"; // Всегда в конце
 

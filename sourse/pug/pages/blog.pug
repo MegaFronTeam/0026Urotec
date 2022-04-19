@@ -1,0 +1,30 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/sBlog/_sBlog.pug
+
+include ../blocks/footer/_footer.pug
+
+
+block variables
+	- let  mainPage= null
+	- let  bg= 'main.jpg'
+
+block title
+	- let  title= index.head.title
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+top-nav()
+	+sBlog 
+
+
+	+footer('hidden')
+      
+
+
+

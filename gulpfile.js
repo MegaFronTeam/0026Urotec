@@ -248,7 +248,7 @@ function startwatch() {
     watch(sourse + '/sass/*.svg', { usePolling: true }, svgCopy);
 
     watch([sourse + '/js/common.js'], { usePolling: true }, common);
-    watch(sourse + '/img', { usePolling: true }, img);
+    // watch(sourse + '/img', { usePolling: true }, img);
 }
 
 export let imgAll = series(cleanimg, img) 
@@ -257,4 +257,4 @@ export let sprite = series(svg, svgCopy)
 
 
 
-export default series(common, libs, styles,cleanFolders, imgAll, sprite, pugFiles, parallel(browsersync, startwatch))
+export default series(common, libs, styles,cleanFolders,   sprite, pugFiles, parallel(browsersync, startwatch))

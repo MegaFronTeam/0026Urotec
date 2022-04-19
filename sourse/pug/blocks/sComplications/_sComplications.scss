@@ -1,11 +1,11 @@
 // start .sComplications
 .sComplications {
-	--sPT: #{rem(99)};
-	--sPB: #{rem(138)};
-	--sTPB: 5rem;
+	//--sPT: #{rem(99)};
+	//--sPB: #{rem(138)};
+	//--sTPB: 5rem;
 	
 	&__row {
-		--bs-gutter-y: #{rem(58)};
+		--bs-gutter-y: #{rem(48)};
 	}
 
 	&__col {
@@ -28,7 +28,7 @@
 		height: 189px;
 		line-height: 189px;
 		vertical-align: middle;
-		margin-bottom: 2rem;		
+		margin-bottom: 1rem;
 	}
 
 	

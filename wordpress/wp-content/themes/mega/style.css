@@ -854,3 +854,8 @@ object {
   color: #fff;
   padding: 0.2em;	
 }
+
+.page-numbers.current{
+	background-color: #0071ba !important;
+	color: #fff !important;
+}

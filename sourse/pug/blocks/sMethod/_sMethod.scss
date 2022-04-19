@@ -1,7 +1,7 @@
 // start .sMethod
 .sMethod {
-		--sPT: #{rem(194)};
-		--sPB: #{rem(70)};
+		//--sPT: #{rem(194)};
+		//--sPB: #{rem(70)};
 		// --sTPB: ;
 		.section-title{
 			h2{
@@ -9,10 +9,13 @@
 			}
 	
 		}
-	.row:not(:last-child) {
+	&__row {
 		margin-bottom: rem(50);
-		--bs-gutter-x:  #{rem(39)};
-		--bs-gutter-y:  #{rem(48)};
+		--bs-gutter-y:  var(--bs-gutter-x);
+		@include media-breakpoint-up(lg) {
+			--bs-gutter-x:  #{rem(39)};
+			--bs-gutter-y:  #{rem(48)};
+		}
 		
 
 		.col {
@@ -26,9 +29,7 @@
 	
 
 	&__item {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
+		text-align: center;
 		padding: rem(45) rem(18) rem(25);
 		min-height: 100%;
 		border: 1px solid rgba(0, 113, 186, 0.2); 

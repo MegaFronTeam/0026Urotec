@@ -135,16 +135,15 @@ function mega_scripts() {
 //		wp_enqueue_style( 'mega-fancy', $get_template_directory_uri.'/public/libs/@fancyapps/fancybox/jquery.fancybox.min.css' );
 		wp_enqueue_style( 'mega-swiper', $get_template_directory_uri.'/public/libs/swiper/swiper.min.css' );
 		wp_enqueue_style( 'mega-fancybox', $get_template_directory_uri.'/public/libs/@fancyapps/ui/fancybox.css' );
-//		wp_enqueue_style( 'mega-animate', $get_template_directory_uri.'/public/libs/animate.css/animate.min.css' );
+		wp_enqueue_style( 'mega-animate', $get_template_directory_uri.'/public/libs/animate.css/animate.min.css' );
 		wp_enqueue_style( 'mega-main', $get_template_directory_uri.'/public/css/main.min.css' );
 		wp_enqueue_style( 'mega-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'mega-Popup', $get_template_directory_uri . '/public/libs/@fancyapps/ui/fancybox.umd.js', array('jquery'), '20200325', true );
-//	wp_enqueue_script( 'mega-gal', $get_template_directory_uri . '/public/libs/fslightbox/index.js', array('jquery'),
-		'20200325', true );
+//	wp_enqueue_script( 'mega-gal', $get_template_directory_uri . '/public/libs/fslightbox/index.js', array('jquery'),'20200325', true );
 	 wp_enqueue_script( 'mega-slider', $get_template_directory_uri . '/public/libs/swiper/swiper-bundle.min.js', array('jquery'), '20200325', true );
 	 wp_enqueue_script( 'mega-inputmask', $get_template_directory_uri . '/public/libs/inputmask/inputmask.min.js', array('jquery'), '20200325', true );
-//	 wp_enqueue_script( 'mega-wow', $get_template_directory_uri . '/public/libs/wowjs/wow.min.js', array('jquery'), '20200325', true );
+	 wp_enqueue_script( 'mega-wow', $get_template_directory_uri . '/public/libs/wowjs/wow.min.js', array('jquery'), '20200325', true );
 	 wp_enqueue_script( 'mega-common', $get_template_directory_uri . '/public/js/common.js', array('jquery'), '202003252', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -195,16 +194,16 @@ function wpb_custom_new_menu() {
 add_post_type_support( 'page', 'excerpt' );
 add_action( 'init', 'wpb_custom_new_menu' );
 	
-	 add_image_size( '2560', 2560,  2000  );
+//	 add_image_size( '2560', 2560,  2000  );
 	 add_image_size( '1920', 1920,  1000 );
-add_image_size( '1400', 1400,  9999 );
+//add_image_size( '1400', 1400,  9999 );
 add_image_size( '1200*800', 1200,  800 );
-add_image_size( 'mob', 480,  1000 );
-add_image_size( 'mob-vertical', 576,  1000, true );
+//add_image_size( 'mob', 480,  1000 );
+//add_image_size( 'mob-vertical', 576,  1000, true );
 	 add_image_size( 'adv', 680 ,  792, true );
-	 add_image_size( '500х500', 500 ,  500, true );
-	 add_image_size( '330х660', 330 ,  660, true );
-	 add_image_size( '680х530', 680 ,  530, true );
+//	 add_image_size( '330х660', 330 ,  660, true );
+	 add_image_size( 'art', 640 ,  340, true );
+//	 add_image_size( '680х530', 680 ,  530, true );
 	// add_image_size( 'card-image-sm', 200, 200, true );
 	// add_image_size( 'tab-lg', 565, 455, true );
 	// add_image_size( 'tab-sm', 100, 100, true );

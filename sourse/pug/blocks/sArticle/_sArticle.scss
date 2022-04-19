@@ -1,0 +1,60 @@
+// start .sArticle
+.sArticle {
+		--sPT: #{rem(66)};
+		--sPB: 0;
+		--sTPB: #{rem(25)};
+	.icon {
+		margin-bottom: rem(33);
+		font-size: rem(16);
+		stroke: $black;
+		transition: stroke .3s ease-in-out;
+		&:hover {
+			stroke: $blue;
+		}
+	}
+
+	small {
+		display: block;
+		margin-bottom: rem(37);
+		font-size: 16px;
+		color: $secondary;
+	}
+
+	img {
+		margin-bottom: rem(50);
+		width: 100%;
+		border-radius: 8px;
+	}
+
+	p {
+		margin-bottom: rem(50);
+		color: $secondary;
+	}
+
+	h3 {
+		margin-bottom: rem(32);
+		font-size: rem(24);
+		font-weight: 700;
+	}
+
+	&__list {
+		@include media-breakpoint-up(lg) {
+			flex-direction: column;
+		}
+		display: flex;
+		.blogItem:first-child {
+			@include media-breakpoint-up(lg) {
+				margin-right: 0;
+			}
+			margin-right: rem(20);
+		}
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sArticle

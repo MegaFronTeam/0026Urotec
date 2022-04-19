@@ -20,7 +20,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="format-detection" content="telephone=no">
-    <link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
 
@@ -38,7 +38,7 @@ global $get_template_directory_uri,
     ?>
 <!-- <body  > -->
 
-<body <?php body_class(); ?>>
+<body    class="<?php if( is_front_page() ) { ?> main-page <?php } ;?>">
 
 <div class="main-wrapper">
     <!-- start top-nav-->
@@ -46,27 +46,31 @@ global $get_template_directory_uri,
         <div class="container">
             <div class="row">
                 <div class="col-lg-auto col">
-                    <div class="top-nav__logo"><a href="/"><img src="img/svg/logo.svg" alt=""/></a>
+                    <div class="top-nav__logo">
+                        <a href="/">
+                            <?php
+                            $image1 = get_field('лого_в_шапке', 'option');
+                            $size = 'full'; // (thumbnail, medium, large, full or custom size)
+                            if( $image1 ) {
+                                echo wp_get_attachment_image( $image1, $size, );
+                            } ?>
+                        </a>
                     </div>
                 </div>
                 <div class="col-lg order-lg-0 order-last">
                     <div class="menu-mobile menu-mobile--js">
                         <div class="menu-mobile__inner">
-                            <div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
-                            </div>
-                            <ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-                                <li class="menu-item" itemprop="item"><a href="#" itemprop="url">О проблеме</a></li>
-                                <li class="menu-item" itemprop="item"><a href="#" itemprop="url">Где купить</a></li>
-                                <li class="menu-item" itemprop="item"><a href="#" itemprop="url">Вопросы и ответы</a></li>
-                                <li class="menu-item" itemprop="item"><a href="#" itemprop="url">Статьи и материалы</a></li>
-                            </ul>
+                            <div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span></div>
+                                <?php wp_nav_menu( [
+                                        'theme_location'  => 'menu-main',
+                                        'container' => ''
+                                ] ); ?>
                         </div>
                     </div>
                 </div>
-                <div class="col-auto">
-                    <a class="top-nav__btn" href="#">Сейфмен
-                    </a>
-                </div>
+<!--                <div class="col-auto">-->
+<!--                    <a class="top-nav__btn" href="#">Сейфмен </a>-->
+<!--                </div>-->
                 <div class="col-auto d-lg-none">
                     <div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
                     </div>
@@ -75,6 +79,4 @@ global $get_template_directory_uri,
         </div>
     </div>
     <!-- end top-nav-->
-	<?php if( !is_front_page() ) { ?>
-	<?php if ( function_exists( 'dimox_breadcrumbs' ) ) dimox_breadcrumbs(); ?>
-	<?php } ?>
+

@@ -174,15 +174,15 @@ const JSCCommon = {
 		}, { passive: true });
 	},
 	animateScroll() {
-		$(document).on('click', " .menu li a, .scroll-link", function () {
+		$(document).on('click', " .menu li a, .scroll-link", function (e) {
 			const elementClick = $(this).attr("href");
 			if (!document.querySelector(elementClick)) {
 				$(this).attr("href", '/' + elementClick)
 			}
 			else {
+				e.preventDefault();
 				let destination = $(elementClick).offset().top;
-				$('html, body').animate({ scrollTop: destination - 80 }, 0);
-				return false;
+				$('html, body').animate({ scrollTop: destination - 55 }, 1000);
 			}
 		});
 	},
@@ -232,7 +232,7 @@ function eventHandler() {
 	JSCCommon.heightwindow();
 	JSCCommon.makeDDGroup();
 	// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
-	// JSCCommon.animateScroll();
+	JSCCommon.animateScroll();
 	
 	// JSCCommon.CustomInputFile(); 
 	var x = window.location.host;
@@ -294,8 +294,24 @@ function eventHandler() {
 	
 
 	$(".btn-toggle--js").click(function () {
-		$(".sources ol").slideToggle();
+		$(".sources ol").slideToggle(function() {
+			if ($(".sources ol").is(":visible")) {
+				$(".btn-toggle--js").text('Свернуть список')
+			} else {
+				$(".btn-toggle--js").text('Развернуть список')
+			}
+		});
+		
 	})
+
+
+	var wow = new WOW(
+		{
+			animateClass: 'animate__animated', // animation css class (default is animated)
+			mobile: false       // trigger animations on mobile devices (default is true)
+		}
+	);
+	wow.init();
 
 };
 if (document.readyState !== 'loading') {
@@ -311,3 +327,21 @@ if (document.readyState !== 'loading') {
 // 		document.body.classList.remove('loaded_hiding');
 // 	}, 500);
 // }
+
+$("#enter-modal .modal-close-js").click(function (){
+
+localStorage.setItem('myKey', 'myValue');
+})
+//Добавляем или изменяем значение:
+//теперь у вас в localStorage хранится ключ "myKey" cо значением "myValue"
+
+//Выводим его в консоль:
+var localValue = localStorage.getItem('myKey');
+if(localValue != "myValue") {
+	setTimeout(() =>{
+
+	Fancybox.show([{ src: "#enter-modal", type: "inline" }]);
+	}, 1000)
+}
+
+

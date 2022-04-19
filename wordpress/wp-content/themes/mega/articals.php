@@ -17,60 +17,95 @@ Template Name: Шаблон записей
  */
 
 get_header();
+global $get_template_directory_uri, $delay;
 ?>
 
-
-<?php
-while ( have_posts() ) :
-    the_post();
-    the_content();
-endwhile;
-?>
-    <!-- start sArticles-->
-    <div class="sArticles section" id="sArticles">
+    <!-- start sBlog-->
+    <section class="sBlog section pt-0" id="sBlog">
+    <div class="section-title wow animate__fadeInUp">
+        <video loading="lazy" preload="auto" no-controls="no-controls" autoplay="autoplay" loop="loop" playsinline="playsinline" muted="muted">
+            <source src="<?= $get_template_directory_uri;?>/public/video/2.webm" type="video/webm"/>
+            <source src="<?= $get_template_directory_uri;?>/public/video/2.mp4" type="video/mp4"/>
+        </video>
+        <div class="container">
+            <h1>Статьи и&nbsp;материалы				</h1>
+        </div>
+    </div>
     <div class="container">
-    <div class="decorative-line decorative-line--articles animate__slideInUp animate__animated wow" data-wow-delay=".2s"></div>
-    <div class="decorative-circle decorative-circle--first animate__slideInRight animate__animated wow" data-wow-delay=".4s"></div>
-    <div class="decorative-circle decorative-circle--second animate__slideInRight animate__animated wow" data-wow-delay=".6s"></div>
-    <div class="bg-text bg-text--articles animate__slideInLeft animate__animated wow" data-wow-delay="1s">articles</div>
-
-
 <?php
-$terms = get_terms([
-	'taxonomy' => 'category',
-	'hide_empty' => false,
-]);
-if ($terms) {
-	foreach ($terms as $term):
-		?>
-
-        <ul>
-            <li><h2><?php echo $term->name; ?></h2></li>
-			<?php
-			$args = array(
-				'posts_per_page' => -1,
-				'category' => $term->term_id
-			);
-
-			$myposts = get_posts($args);
-			foreach ($myposts as $post) : setup_postdata($post); ?>
-                <li>
-                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                </li>
-			<?php endforeach;
-			wp_reset_postdata(); ?>
-        </ul>
-	<?php
-	endforeach;
-}
+$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+$args = array(
+		'post_type'      => 'post',
+		'posts_per_page' => 9,
+		'orderby'        => 'date',
+		'order'          => 'DESC',
+		'paged' => $paged
+);
+$custom_query = new WP_Query($args);
 ?>
+    <div class="row">
+
+
+	<?php while ( $custom_query->have_posts() ) : $custom_query->the_post(); ?>
+        <div class="col-12 col-lg-4 col-sm-6 wow animate__fadeInUp" >
+            <a class="blogItem" href="<?php the_permalink(); ?>">
+                <div class="blogItem__img-wrap">
+									<?php echo get_the_post_thumbnail(); ?>
+                </div>
+                <div class="blogItem__title"><?php the_title() ?> </div>
+                <div class="blogItem__date"><?php the_date() ?></div>
+            </a>
+        </div>
+	<?php endwhile; ?>
 
     </div>
+    <div class="pagination-wrapper wow animate__fadeInUp">
+			<?php
+			// numbered pagination
+			function pagination($pages = '', $range = 4)
+			{
+				$showitems = ($range * 2)+1;
+
+				global $paged;
+				if(empty($paged)) $paged = 1;
+
+				if($pages == '')
+				{
+					global $wp_query;
+					$pages = $wp_query->max_num_pages;
+					if(!$pages)
+					{
+						$pages = 1;
+					}
+				}
+
+				if(1 != $pages)
+				{
+
+					echo "<ul class=\"page-numbers justify-content-center\">";
+					for ($i=1; $i <= $pages; $i++)
+					{
+					echo "<li>";
+						if (1 != $pages &&( !($i >= $paged+$range+1 || $i <= $paged-$range-1) || $pages <= $showitems ))
+						{
+							echo ($paged == $i)? "<span class=\"page-numbers current\">".$i."</span>":"<a href='".get_pagenum_link($i)."' class=\"page-numbers\">".$i."</a>";
+						}
+					echo "</li>";
+					}
+                    echo "</ul>\n";
+				}
+			}
+			?>
+
+						<?php if (function_exists("pagination")) {
+							pagination($custom_query->max_num_pages);
+						} ?>
+
+
     </div>
-    <!-- end sArticles-->
-			
-		
-			
+
+<?php wp_reset_postdata(); ?>
+
 	
 <?php
 get_footer();

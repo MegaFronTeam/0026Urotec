@@ -28,7 +28,7 @@
 	}
 
 	&__video {
-		@include block(1120,512);
+		@include block(1920,1080);
 		position: relative;
 		text-align: center;
 		z-index: 2;
@@ -42,7 +42,9 @@
 				background-color: #004CAC;
 				z-index: -1;
 			}
+		video,
 		iframe {
+			background-color: #000;
 			position: absolute;
 			top: 0;			
 			left: 0;
